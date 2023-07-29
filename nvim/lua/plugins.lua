@@ -4,6 +4,7 @@ return require('packer').startup(function()
     -- colorscheme
     use 'gruvbox-community/gruvbox'
     use 'sainnhe/everforest'
+    use 'rebelot/kanagawa.nvim'
 
     -- telescope fuzzy finder
     use {
