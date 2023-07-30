@@ -2,9 +2,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use 'gruvbox-community/gruvbox'
     use 'sainnhe/everforest'
-    use 'rebelot/kanagawa.nvim'
+    use 'EdenEast/nightfox.nvim'
 
     -- telescope fuzzy finder
     use {
