@@ -10,6 +10,7 @@
 
 
 # nvim configs
+rm -rf ~/.local/share/nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim         # install packer
 rm -rf ~/.config/nvim                                           # cleans out any existing nvim
@@ -22,4 +23,3 @@ ln -s $(pwd)/alacritty ~/.config/alacritty
 # starship prompt config
 rm -f ~/.config/starship.toml
 ln -s $(pwd)/starship.toml ~/.config/starship.toml
-
