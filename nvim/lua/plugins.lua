@@ -18,4 +18,6 @@ return require('packer').startup(function()
         {run = ':TSUpdate'}
     }
 
+    use '/Users/lienzhu/computing/nvim-plugins/ntime'
+
 end)
