@@ -1,0 +1,18 @@
+live_config_reload: true
+
+window:
+  dimensions:
+    columns: 126
+    lines: 39
+  opacity: 0.76
+  padding:
+    x: 24
+    y: 18
+  dynamic_padding: false
+  decorations: buttonless
+
+font:
+  normal:
+    family: "SFMono Nerd Font"
+    style: Regular
+  size: 18.0
