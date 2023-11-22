@@ -1,3 +1,5 @@
 .DS_Store
 packer_compiled_lua
 nvim/plugin/packer_compiled.lua
+tmux/plugins/*
+!tmux/plugins/tpm
