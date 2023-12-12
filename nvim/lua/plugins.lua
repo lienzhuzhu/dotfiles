@@ -2,7 +2,6 @@ return require('packer').startup(function()
 
     use 'wbthomason/packer.nvim'
 
-    use 'sainnhe/everforest'
     use 'EdenEast/nightfox.nvim'
 
     use {
