@@ -1,4 +1,3 @@
-vim.cmd.colorscheme("everforest")
 vim.cmd.colorscheme("nightfox")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
