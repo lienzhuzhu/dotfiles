@@ -24,4 +24,4 @@ vim.o.smartcase = true
 vim.o.scrolloff = 8
 
 vim.o.laststatus = 2
-vim.o.showtabline = 2
+--vim.o.showtabline = 2
