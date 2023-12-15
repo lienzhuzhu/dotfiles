@@ -1,4 +1,5 @@
 return require('packer').startup(function()
+
     use 'wbthomason/packer.nvim'
     use 'EdenEast/nightfox.nvim'
 
@@ -13,5 +14,7 @@ return require('packer').startup(function()
     }
 
     use 'christoomey/vim-tmux-navigator'
+    use 'feline-nvim/feline.nvim'
+
 end)
 

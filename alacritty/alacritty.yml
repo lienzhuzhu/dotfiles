@@ -6,9 +6,9 @@ window:
     lines: 48
   opacity: 0.95
   padding:
-    x: 24
-    y: 18
-  dynamic_padding: false
+    x: 0
+    y: 0
+  dynamic_padding: true
   decorations: buttonless
 
 font:
