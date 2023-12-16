@@ -1,20 +1,20 @@
 return {
 
-     'wbthomason/packer.nvim',
+     "wbthomason/packer.nvim",
 
-     'EdenEast/nightfox.nvim',
+     "EdenEast/nightfox.nvim",
 
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
-        dependencies = { {'nvim-lua/plenary.nvim'} }
+        "nvim-telescope/telescope.nvim", tag = "0.1.2",
+        dependencies = { {"nvim-lua/plenary.nvim"} }
     },
 
     {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
     },
 
-     'christoomey/vim-tmux-navigator',
+     "christoomey/vim-tmux-navigator",
 
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -28,8 +28,8 @@ return {
     },
 
     {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons", opt = true }
     }
 
 }
