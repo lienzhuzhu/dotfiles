@@ -13,9 +13,9 @@ window:
 
 font:
   normal:
-    family: "MartianMono Nerd Font"
+    family: "SauceCodePro Nerd Font"
     style: Regular
-  size: 16.0
+  size: 20.0
 
 
 
