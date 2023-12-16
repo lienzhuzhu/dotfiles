@@ -33,10 +33,6 @@ zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
 
-
-# makes sure zsh acknowledges it is running on alacritty
-#export TERM=alacritty
-
 # output colors
 export LS_COLORS="di=1;33;40" # Linux
 export LSCOLORS=Exfxcxdxbxgexexabagacad # BSD/ MacOS

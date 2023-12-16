@@ -17,10 +17,12 @@ font:
     style: Regular
   size: 18.0
 
-#env:
-# TERM: xterm-256color
 
-## Kanagawa Alacritty Colors
+
+###############################
+## Kanagawa Alacritty Colors ##
+###############################
+
 colors:
   primary:
     #background: '0x1f1f28'
