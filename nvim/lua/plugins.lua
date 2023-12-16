@@ -1,7 +1,5 @@
 return {
 
-     "wbthomason/packer.nvim",
-
      "EdenEast/nightfox.nvim",
 
     {
