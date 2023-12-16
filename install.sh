@@ -5,6 +5,7 @@
 # - a Nerd Font
 # - Neovim
 # - ripgrep
+# - fd
 # - Alacritty
 # - Starship.rs
 
@@ -38,6 +39,13 @@ fi
 
 
 repo_dir=$(pwd)
+
+# INSTALL: dependencies for Neovim file functionality
+if [[ "$this_system" == "macOS" ]]; then
+    brew install fd ripgrep
+else
+    # not sure
+fi
 
 
 # INSTALL: Rust - requires interaction

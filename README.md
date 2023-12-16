@@ -3,3 +3,4 @@
 #### nvim
 - packer
 - ripgrep
+- fd
