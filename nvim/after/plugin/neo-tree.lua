@@ -4,5 +4,8 @@ require("neo-tree").setup({
         mappings = {
             ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
         }
+    },
+    filesystem = {
+        hijack_netrw_behavior = "open_current"
     }
 })
