@@ -9,6 +9,6 @@ return {
     },
 
     config = function()
-
+        vim.keymap.set("n", "<leader>t", ":Neotree toggle<CR>")
     end
 }
