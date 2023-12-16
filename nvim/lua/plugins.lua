@@ -14,8 +14,6 @@ return require('packer').startup(function()
     }
 
     use 'christoomey/vim-tmux-navigator'
-    --use 'feline-nvim/feline.nvim'
-    --use 'nvim-tree/nvim-web-devicons'
 
     use {
         "nvim-neo-tree/neo-tree.nvim",
