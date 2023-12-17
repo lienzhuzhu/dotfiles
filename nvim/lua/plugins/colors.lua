@@ -1,36 +1,22 @@
 return {
-    {
-        --"EdenEast/nightfox.nvim",
-        "rebelot/kanagawa.nvim",
+    "rebelot/kanagawa.nvim",
 
-        config = function()
+    config = function()
 
-            require('kanagawa').setup({
-                compile = false,
-                undercurl = true,
-                commentStyle = { italic = true },
-                background = {
-                    dark = "dragon",
-                    light = "lotus"
-                },
-            })
-            vim.cmd("colorscheme kanagawa-dragon")
+        require('kanagawa').setup({
+            compile = false,
+            undercurl = true,
+            commentStyle = { italic = true },
+            background = {
+                dark = "dragon",
+                light = "lotus"
+            },
+        })
 
-            --require('nightfox').setup()
-            --vim.cmd("colorscheme nordfox")
+        vim.cmd("colorscheme kanagawa-dragon")
 
-            vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-        end
-    },
-    {
-        "norcalli/nvim-colorizer.lua",
-
-        config = function()
-
-            require'colorizer'.setup()
-
-        end
-    }
+    end
 }
