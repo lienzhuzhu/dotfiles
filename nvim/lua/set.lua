@@ -16,7 +16,7 @@ vim.o.smartcase = true
 vim.o.scrolloff = 8
 
 vim.o.laststatus = 2
-vim.o.showtabline = 2
+vim.o.showtabline = 0
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
