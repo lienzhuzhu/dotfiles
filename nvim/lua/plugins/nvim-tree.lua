@@ -8,13 +8,16 @@ return {
 
     config = function()
         require("nvim-tree").setup ({
+            view = {
+                width = 50
+            },
             actions = {
                 open_file = {
                     quit_on_open = true
                 }
             }
         })
-        vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
+        vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { silent = true })
 
     end
 }
