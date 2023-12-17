@@ -18,7 +18,9 @@ vim.o.scrolloff = 8
 vim.o.laststatus = 2
 vim.o.showtabline = 0
 
+vim.o.showmode = false
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.opt.termguicolors = true
+vim.o.termguicolors = true
