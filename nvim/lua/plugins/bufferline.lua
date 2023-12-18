@@ -1,6 +1,6 @@
 return {
     'akinsho/bufferline.nvim', 
-    dependencies = { {'nvim-tree/nvim-web-devicons'} }, 
+    dependencies = { 'nvim-tree/nvim-web-devicons' }, 
 
     config = function()
 
@@ -14,8 +14,8 @@ return {
             }
         })
 
-        vim.keymap.set("n", "<leader>[", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-        vim.keymap.set("n", "<leader>]", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+        vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+        vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 
     end
 }
