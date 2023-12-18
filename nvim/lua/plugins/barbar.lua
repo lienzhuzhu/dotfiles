@@ -4,25 +4,23 @@ return {
         'lewis6991/gitsigns.nvim',
         'nvim-tree/nvim-web-devicons',
     },
+    version = '^1.0.0',
 
     init = function()
-
         vim.g.barbar_auto_setup = false
-
-        local map = vim.api.nvim_set_keymap
-        local opts = { noremap = true, silent = true }
-
-        -- Move to previous/next
-        map('n', '_', '<Cmd>BufferPrevious<CR>', opts)
-        map('n', '+', '<Cmd>BufferNext<CR>', opts)
-
     end,
 
-    opts = {
-        animation = false,
-        sidebar_filetypes = {
-            NvimTree = true,
-        }
-    },
-    version = '^1.0.0',
+    config  = function()
+
+        require('barbar').setup({
+            animation = false,
+            sidebar_filetypes = {
+                NvimTree = true,
+            }
+        })
+
+        vim.keymap.set("n", "_", ":BufferPrevious<CR>", { noremap = true, silent = true })
+        vim.keymap.set("n", "+", ":BufferNext<CR>", { noremap = true, silent = true })
+
+    end
 }
