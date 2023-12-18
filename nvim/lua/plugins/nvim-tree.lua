@@ -10,7 +10,7 @@ return {
 
         require("nvim-tree").setup ({
             view = {
-                width = 50
+                width = 80
             },
             actions = {
                 open_file = {
