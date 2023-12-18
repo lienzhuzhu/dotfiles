@@ -1,4 +1,4 @@
-require('remap')
+require('keymaps')
 require('set')
 
 
