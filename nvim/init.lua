@@ -16,6 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
+    dev = {
+        path = "~/computing/nvim-projects/"
+    },
     change_detection = {
         notify = false
     }
