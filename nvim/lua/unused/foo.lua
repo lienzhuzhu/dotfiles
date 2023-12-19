@@ -3,6 +3,8 @@ return {
     dev = true,
 
     config = function()
+
         require("foo")
+
     end
 }
