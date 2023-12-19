@@ -26,3 +26,5 @@ vim.o.showtabline = 0
 vim.o.showmode = false
 
 vim.o.termguicolors = true
+
+vim.opt.signcolumn = "yes"
