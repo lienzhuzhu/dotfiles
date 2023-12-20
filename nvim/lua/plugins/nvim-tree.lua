@@ -19,7 +19,7 @@ return {
             }
         })
 
-        vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>", { silent = true })
+        vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { silent = true })
 
     end
 }
