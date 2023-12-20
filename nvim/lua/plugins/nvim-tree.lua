@@ -14,9 +14,20 @@ return {
             },
             actions = {
                 open_file = {
-                    quit_on_open = true
+                    quit_on_open = true,
+                    window_picker = {
+                        enable = false
+                    }
                 }
-            }
+            },
+            filters = {
+                custom = { ".DS_Store" },
+            },
+            ui = {
+                confirm = {
+                    default_yes = true,
+                },
+            },
         })
 
         vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { silent = true })
