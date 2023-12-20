@@ -4,7 +4,7 @@ eval "$(starship init zsh)" # use starship prompt
 
 alias vim='nvim'
 alias python='python3'
-
+alias ls='colorls --sd'
 
 # ENV variables
 export VISUAL=nvim
