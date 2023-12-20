@@ -3,7 +3,12 @@ return {
 
     config = function()
 
-        require"colorizer".setup()
+        require"colorizer".setup({
+            "yaml",
+            "css",
+        })
+
+        vim.cmd [[autocmd BufWritePost * ColorizerAttachToBuffer]]
 
     end
 }
