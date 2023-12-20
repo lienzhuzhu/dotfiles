@@ -10,8 +10,10 @@ alias python='python3'
 export VISUAL=nvim
 export EDITOR=nvim
 
-bindkey '^R' history-incremental-search-backward
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
 
+bindkey '^R' history-incremental-search-backward
 
 # vim mode
 autoload edit-command-line; zle -N edit-command-line
