@@ -28,3 +28,5 @@ vim.o.showmode = false
 vim.o.termguicolors = true
 
 vim.opt.signcolumn = "yes"
+
+vim.opt.swapfile = false
