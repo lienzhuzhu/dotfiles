@@ -32,7 +32,7 @@ Ubuntu = " "
 [directory]
 read_only = "󰌾"
 truncation_length = 0
-format = "in [$path]($style)[$read_only]($read_only_style) "
+format = "in [$path]($style)[ $read_only]($read_only_style) "
 
 [username]
 style_user = 'white bold'
