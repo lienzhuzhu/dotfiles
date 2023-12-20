@@ -10,6 +10,15 @@ return {
             highlight = {
                 enable = true
             },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<leader>si",
+                    node_incremental = "<leader>sn",
+                    scope_incremental = "<leader>ss",
+                    node_decremental = "<leader>sd",
+                },
+            },
         })
 
     end
