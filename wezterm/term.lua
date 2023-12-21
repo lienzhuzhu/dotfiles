@@ -16,7 +16,13 @@ function M.apply_to_config(config)
     private_helper()
 
     config.audible_bell = "Disabled"
-
+    config.keys = {
+        {
+            key = 'P',
+            mods = 'CMD',
+            action = wezterm.action.ActivateCommandPalette,
+        },
+    }
 end
 
 return M

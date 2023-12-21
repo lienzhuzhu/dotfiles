@@ -16,6 +16,7 @@ function M.apply_to_config(config)
     private_helper()
 
     config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+    config.enable_tab_bar = false
 
 end
 

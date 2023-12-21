@@ -15,7 +15,8 @@ function M.apply_to_config(config)
 
     private_helper()
 
-    config.font_size = 16.0
+    config.font_size = 18.0
+    config.font = wezterm.font("SauceCodePro Nerd Font")
 
 end
 
