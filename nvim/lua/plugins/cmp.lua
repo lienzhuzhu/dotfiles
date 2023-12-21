@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    lazy = false, -- ensure it loads immediately
+    lazy = false, -- MUST LOAD IN IMMEDIATELY TO PREVENT RACE CONDITION WITH BUFFERLINE
     dependencies = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
