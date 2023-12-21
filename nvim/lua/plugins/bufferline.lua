@@ -1,7 +1,7 @@
 return {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    event = "BufReadPre",
+    event = "BufReadPre", -- necessary to fix the issue with lspconfig
     config = function()
 
         require("bufferline").setup({
