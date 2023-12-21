@@ -15,6 +15,10 @@ local opts = {
     dev = {
         path = "~/computing/nvim-projects/"
     },
+    checker = {
+        enabled = true,
+        notify = false
+    },
     change_detection = {
         notify = false
     }
