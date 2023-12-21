@@ -19,18 +19,18 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-            snippet = { -- configure how nvim-cmp interacts with snippet engine
+            snippet = { -- interactions with snippet engine
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
                 end
             },
             mapping = cmp.mapping.preset.insert({
-                ["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-                ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
-                ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-                ["<C-u>"] = cmp.mapping.scroll_docs(4),
+                ["<C-p>"] = cmp.mapping.select_prev_item(),
+                ["<C-n>"] = cmp.mapping.select_next_item(),
+                ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+                ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.config.disable,
-                ["<C-e>"] = cmp.mapping.abort(), -- close completion window
+                ["<C-e>"] = cmp.mapping.abort(),
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
             sources = cmp.config.sources({
