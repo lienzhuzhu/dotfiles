@@ -1,7 +1,7 @@
 return {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    event = "BufReadPre", -- necessary to fix the issue with lspconfig
+    event = "BufReadPre", -- necessary to fix the issue with lspconfig and mason
     config = function()
 
         require("bufferline").setup({
