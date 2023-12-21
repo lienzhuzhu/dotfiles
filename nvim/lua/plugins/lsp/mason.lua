@@ -1,6 +1,6 @@
 return {
     "williamboman/mason.nvim",
-    --lazy = false,
+    lazy = false, -- ensure it loads immediately
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
     },

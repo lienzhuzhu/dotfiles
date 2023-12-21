@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    --event = "InsertEnter",
+    lazy = false, -- ensure it loads immediately
     dependencies = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
