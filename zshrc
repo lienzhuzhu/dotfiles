@@ -1,17 +1,26 @@
 neofetch # fancy
 
 eval "$(starship init zsh)" # use starship prompt
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
 
 alias vim='nvim'
 alias python='python3'
 alias ls='colorls --sd'
 
+# colorls --tree alias
+function lt() {
+    if [[ -n $1 ]]; then
+        colorls --tree=$1
+    else
+        colorls --tree
+    fi
+}
+
+
 # ENV variables
 export VISUAL=nvim
 export EDITOR=nvim
-
-eval "$(pyenv init -)"
-eval "$(rbenv init -)"
 
 bindkey '^R' history-incremental-search-backward
 
