@@ -1,7 +1,7 @@
 return {
     'akinsho/bufferline.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    event = "BufReadPre",   -- necessary to prevent race conditions where mason or lspconfig don't exist
+    --event = "BufReadPre",   -- necessary to prevent race conditions where mason or lspconfig don't exist
                             -- so first load other plugins then load bufferline on BufReadPre.
     config = function()
 
