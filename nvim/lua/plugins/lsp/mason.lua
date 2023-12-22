@@ -9,7 +9,7 @@ return {
                 upgrade_pip = true,
             },
             ui = {
-                border = "single",
+                border = "rounded",
             }
         })
 
