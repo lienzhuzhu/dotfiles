@@ -13,7 +13,7 @@ return {
                     }
                 },
                 mode = "buffers"    -- THIS IS THE DEFAULT VALUE, PASTED HERE FOR REFERENCE 
-                                    -- MUST BE SET TO THIS DEFAULT VALUE TO PREVENT RACE CONDITION WITH NVIM-CMP
+                                    -- THIS DEFAULT VALUE REQUIRES THAT nvim-cmp LOADS ON START
             }
         })
 
