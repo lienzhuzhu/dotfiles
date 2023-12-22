@@ -3,8 +3,7 @@ return {
 
     config = function()
 
-        require("colorizer").setup(
-        {
+        require("colorizer").setup({
             filetypes = { "*" },
             user_default_options = {
                 RGB = true, -- #RGB hex codes
@@ -30,10 +29,7 @@ return {
             },
             -- all the sub-options of filetypes apply to buftypes
             buftypes = {},
-        }
-        )
-
-        vim.cmd [[autocmd BufWritePost * ColorizerAttachToBuffer]]
+        })
 
     end
 }
