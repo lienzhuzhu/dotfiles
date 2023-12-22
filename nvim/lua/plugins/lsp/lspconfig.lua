@@ -1,7 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
-    --lazy = false, -- ensure it loads immediately
-    event = { "BufReadPre", "BufNewFile" },
+    lazy = false, -- ensure it loads immediately
     dependencies = {
         "hrsh7th/cmp-nvim-lsp"
     },

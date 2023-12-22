@@ -22,7 +22,7 @@ vim.opt.smartcase = true
 
 vim.opt.scrolloff = 8
 
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 vim.opt.showtabline = 0
 
 vim.opt.showmode = false
