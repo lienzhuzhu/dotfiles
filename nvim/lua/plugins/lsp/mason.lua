@@ -8,13 +8,20 @@ return {
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
 
-        mason.setup()
+        mason.setup({
+            --pip = {
+            --    upgrade_pip = true,
+            --},
+            ui = {
+                border = "single",
+            }
+        })
 
         mason_lspconfig.setup({
             ensure_installed = {
                 "lua_ls",
                 "pyright",
-                "clangd"
+                "clangd",
             },
             automatic_installation = true
         })
