@@ -3,11 +3,22 @@ return {
     lazy = false, -- ensure it loads immediately
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
-        --"williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim"
     },
 
     config = function()
+
+        local mason_lspconfig = require("mason-lspconfig")
+
+        mason_lspconfig.setup({
+            ensure_installed = {
+                "lua_ls",
+                "pyright",
+                "clangd",
+            },
+            automatic_installation = true
+        })
+
 
         local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -100,17 +111,6 @@ return {
         lspconfig["jdtls"].setup({
             capabilities = capabilities,
             on_attach = on_attach
-        })
-
-        local mason_lspconfig = require("mason-lspconfig")
-
-        mason_lspconfig.setup({
-            ensure_installed = {
-                "lua_ls",
-                "pyright",
-                "clangd",
-            },
-            automatic_installation = true
         })
 
     end
