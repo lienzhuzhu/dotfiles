@@ -17,8 +17,8 @@ return {
             }
         })
 
-        vim.keymap.set("n", "_", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-        vim.keymap.set("n", "+", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+        vim.keymap.set("n", "_", "<cmd>BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+        vim.keymap.set("n", "+", "<cmd>BufferLineCycleNext<CR>", { noremap = true, silent = true })
 
     end
 }
