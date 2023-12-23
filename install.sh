@@ -6,7 +6,7 @@
 # - Neovim
 # - ripgrep
 # - fd
-# - Alacritty
+# - Wezterm
 # - Starship.rs
 
 
