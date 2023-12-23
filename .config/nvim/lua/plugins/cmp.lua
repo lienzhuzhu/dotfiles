@@ -30,7 +30,7 @@ return {
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.config.disable,
-                ["<Space>"] = cmp.mapping.abort(),
+                ["<C-e>"] = cmp.mapping.abort(),
 
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
