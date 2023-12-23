@@ -1,7 +1,9 @@
 .DS_Store
 
 .config/tmux/plugins/*
-env/
-__pycache__/
+!.config/tmux/plugins/tpm
+
+*/env/
+*/__pycache__/
 *.py[cod]
 *$py.class
