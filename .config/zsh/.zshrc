@@ -22,13 +22,14 @@ function lt() {
 export VISUAL=nvim
 export EDITOR=nvim
 
-bindkey '^R' history-incremental-search-backward
 
 # vim mode
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd vv edit-command-line
 bindkey -v
 bindkey "^?" backward-delete-char
+
+bindkey '^R' history-incremental-search-backward
 
 function zle-keymap-select zle-line-init zle-line-finish {
     if [[ ${KEYMAP} == vicmd ]] ||
