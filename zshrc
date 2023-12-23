@@ -6,7 +6,7 @@ eval "$(rbenv init -)"
 
 alias vim='nvim'
 alias python='python3'
-alias ls='colorls --sd'
+alias ls='colorls --sd -a'
 
 # colorls --tree alias
 function lt() {

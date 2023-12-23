@@ -1,11 +1,45 @@
 -- Entry point for Wezterm settings
-
+local wezterm = require("wezterm")
 local config = {}
 
-require("term").apply_to_config(config)
-require("window").apply_to_config(config)
-require("font").apply_to_config(config)
-require("colors").apply_to_config(config)
-require("keys").apply_to_config(config)
+
+
+-- Window settings
+--
+config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+config.enable_tab_bar = false
+config.window_background_opacity = 0.96
+config.macos_window_background_blur = 0
+config.initial_cols = 170
+config.initial_rows = 48
+
+
+-- General terminal emulator settings
+--
+config.audible_bell = "Disabled"
+
+
+-- Keymap settings
+--
+config.keys = {
+    {
+        key = 'P',
+        mods = 'CMD',
+        action = wezterm.action.ActivateCommandPalette,
+    },
+}
+
+
+-- Color schemes and visual settings
+--
+config.color_scheme = "Batman"
+config.window_background_opacity = 0.94
+
+
+-- Font settings
+--
+config.font_size = 18.0
+config.font = wezterm.font("SauceCodePro Nerd Font")
+
 
 return config
