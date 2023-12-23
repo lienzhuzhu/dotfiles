@@ -1,6 +1,6 @@
 .DS_Store
 
-tmux/plugins/*
+.config/tmux/plugins/*
 env/
 __pycache__/
 *.py[cod]
