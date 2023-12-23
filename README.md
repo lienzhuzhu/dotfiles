@@ -1,6 +1,6 @@
-### DEPENDENCIES:
+### Usage
 
-#### nvim
-- packer
-- ripgrep
-- fd
+
+```
+./install.sh
+```
