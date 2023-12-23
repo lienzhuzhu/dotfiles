@@ -25,8 +25,8 @@ return {
                 end
             },
             mapping = cmp.mapping.preset.insert({
-                ["<C-p>"] = cmp.mapping.select_prev_item(),
-                ["<C-n>"] = cmp.mapping.select_next_item(),
+                ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+                ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.config.disable,
@@ -49,9 +49,7 @@ return {
                 --        else
                 --            fallback()
                 --        end
-                --    end,
-                --    { "i", "s", }
-                --),
+                --    end, { "i", "s", }),
 
                 --["<S-Tab>"] = cmp.mapping(
                 --    function(fallback)
@@ -62,9 +60,7 @@ return {
                 --        else
                 --            fallback()
                 --        end
-                --    end,
-                --    { "i", "s", }
-                --),
+                --    end, { "i", "s", }),
 
             }),
             sources = cmp.config.sources({
