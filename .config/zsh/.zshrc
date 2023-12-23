@@ -90,4 +90,8 @@ function zsh_add_plugin() {
 }
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+export ZSH_AUTOSUGGEST_MANUAL_REBIND="foo"
+
+bindkey '^[[Z' autosuggest-accept
