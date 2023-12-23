@@ -32,35 +32,36 @@ return {
                 ["<C-Space>"] = cmp.config.disable,
                 ["<C-e>"] = cmp.mapping.abort(),
 
-                ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
-                --["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<Tab>"] = cmp.mapping(
+                    function(fallback)
+                        if cmp.visible() then
+                            cmp.confirm({ select = true })
+                            --if #cmp.get_entries() == 1 then
+                            --    cmp.confirm({ select = true })
+                            --else
+                            --    cmp.select_next_item()
+                            --end
+                        elseif luasnip.expandable() then
+                            luasnip.expand()
+                        elseif luasnip.expand_or_jumpable() then
+                            luasnip.expand_or_jump()
+                        else
+                            fallback()
+                        end
+                    end, { "i", "s", }),
 
-                --["<Tab>"] = cmp.mapping(
-                --    function(fallback)
-                --        if cmp.visible() then
-                --            cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-                --        elseif luasnip.expandable() then
-                --            luasnip.expand()
-                --        elseif luasnip.expand_or_jumpable() then
-                --            luasnip.expand_or_jump()
-                --        elseif check_backspace() then
-                --            fallback()
-                --        else
-                --            fallback()
-                --        end
-                --    end, { "i", "s", }),
-
-                --["<S-Tab>"] = cmp.mapping(
-                --    function(fallback)
-                --        if cmp.visible() then
-                --            cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-                --        elseif luasnip.jumpable(-1) then
-                --            luasnip.jump(-1)
-                --        else
-                --            fallback()
-                --        end
-                --    end, { "i", "s", }),
+                ["<S-Tab>"] = cmp.mapping(
+                    function(fallback)
+                        if cmp.visible() then
+                            cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+                        elseif luasnip.jumpable(-1) then
+                            luasnip.jump(-1)
+                        else
+                            fallback()
+                        end
+                    end, { "i", "s", }),
 
             }),
             experimental = {
