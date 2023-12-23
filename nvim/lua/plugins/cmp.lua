@@ -63,6 +63,9 @@ return {
                 --    end, { "i", "s", }),
 
             }),
+            experimental = {
+                ghost_text = true
+            },
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "buffer" },
