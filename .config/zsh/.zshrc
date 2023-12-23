@@ -17,19 +17,39 @@ function lt() {
     fi
 }
 
+# disables the highlighting behavior when pasting
+zle_highlight=('paste:none') 
 
-# ENV variables
+## ENV Variables ##
+
 export VISUAL=nvim
 export EDITOR=nvim
 
 
-# vim mode
+## Basic Auto/tab Complete ##
+
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+
+## Vim Mode ##
+
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd vv edit-command-line
 bindkey -v
 bindkey "^?" backward-delete-char
 
-bindkey '^R' history-incremental-search-backward
+
+## Use Vim Keys In Tab Complete Menu ##
+
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
 function zle-keymap-select zle-line-init zle-line-finish {
     if [[ ${KEYMAP} == vicmd ]] ||
@@ -45,7 +65,29 @@ zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
 
-# output colors
+bindkey '^R' history-incremental-search-backward
+
+
+## ls Command Output Colors ##
+
 #export LS_COLORS="di=1;33;40" # Linux
 export LSCOLORS=dxfxcxdxbxgexexabagacad # BSD/ MacOS
 export CLICOLOR=1
+
+function zsh_add_file() {
+    [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
+}
+
+function zsh_add_plugin() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then 
+        # For plugins
+        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
+        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+    else
+        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+    fi
+}
+
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"

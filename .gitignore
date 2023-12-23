@@ -1,9 +1,13 @@
 .DS_Store
 
-.config/tmux/plugins/*
-!.config/tmux/plugins/tpm
-
 */env/
 */__pycache__/
 *.py[cod]
 *$py.class
+
+.config/tmux/plugins/*
+!.config/tmux/plugins/tpm
+
+.config/zsh/plugins/
+.config/zsh/.zcompdump
+.config/zsh/.zsh_history
