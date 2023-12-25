@@ -32,11 +32,8 @@ config.keys = {
 
 -- Color schemes and visual settings
 --
---config.color_scheme = "kanagawa (Gogh)"
-config.color_scheme = "kanagawabones"
-config.colors = {
-     background = "#181616"
-}
+--config.color_scheme = "kanagawabones"
+config.color_scheme = "mykanagawa"
 
 
 -- Font settings

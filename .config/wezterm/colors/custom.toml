@@ -1,0 +1,53 @@
+[colors]
+foreground = "#ebdbb2"
+background = "#000000"
+
+cursor_bg = "#928374"
+cursor_border = "#928374"
+cursor_fg = "#1d2021"
+
+selection_bg = "#ebdbb2"
+selection_fg = "#928374"
+
+ansi = [ "#665c54", "#fb4934", "#8a9a7b", "#fabd2f", "#83a598", "#d3869b", "#8ea4a2", "#bdae93", ]
+brights = [ "#928374", "#cc241d", "#87a987", "#d79921", "#458588", "#b16286", "#7AA89F", "#a89984", ]
+
+
+
+# Alacritty
+
+#[colors.primary]
+#background = "#181616"
+#foreground = "#c5c9c5"
+#
+#[colors.normal]
+#black = "#0d0c0c"
+#red = "#c4746e"
+#green = "#8a9a7b"
+#yellow = "#c4b28a"
+#blue = "#8ba4b0"
+#magenta = "#a292a3"
+#cyan = "#8ea4a2"
+#white = "#C8C093"
+#
+#[colors.bright]
+#black = "#a6a69c"
+#red = "#E46876"
+#green = "#87a987"
+#yellow = "#E6C384"
+#blue = "#7FB4CA"
+#magenta = "#938AA9"
+#cyan = "#7AA89F"
+#white = "#c5c9c5"
+#
+#[colors.selection]
+#background = "#2D4F67"
+#foreground = "#C8C093"
+#
+#[[colors.indexed_colors]]
+#index = 16
+#color = "#b6927b"
+#
+#[[colors.indexed_colors]]
+#index = 17
+#color = "#b98d7b"
