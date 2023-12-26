@@ -12,7 +12,7 @@ config.window_background_opacity = 0.94
 config.macos_window_background_blur = 0
 config.initial_cols = 170
 config.initial_rows = 48
-
+config.window_close_confirmation = "NeverPrompt"
 
 -- General terminal emulator settings
 --
