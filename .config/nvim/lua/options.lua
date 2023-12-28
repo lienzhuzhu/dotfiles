@@ -33,4 +33,4 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.swapfile = false
 
-vim.opt.clipboard = "unnamedplus"
+--vim.opt.clipboard = "unnamedplus" -- I don't really like sharing the clipboards between system and nvim
