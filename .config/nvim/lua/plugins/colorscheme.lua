@@ -19,6 +19,9 @@ return {
 
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "CursorLineNr", { ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = "none" })
 
     end
 }
