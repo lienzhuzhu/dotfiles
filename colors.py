@@ -161,7 +161,7 @@ def rgb_to_hex(rgb):
 
 color_hex_codes = {name: rgb_to_hex(rgb) for name, rgb in color_dict.items()}
 
-file_path = './colorls/dark_colors.yaml'
+file_path = './.config/colorls/dark_colors.yaml'
 
 # Check if the directory exists, exit if not
 if not os.path.exists(os.path.dirname(file_path)):
