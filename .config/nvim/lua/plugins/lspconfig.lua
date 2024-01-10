@@ -3,12 +3,6 @@ return {
     lazy = false, -- ensure it loads immediately
     dependencies = {
         {
-            "hrsh7th/cmp-nvim-lsp"
-        },
-        {
-            "williamboman/mason-lspconfig.nvim"
-        },
-        {
             "williamboman/mason.nvim",
 
             config = function()
@@ -25,7 +19,13 @@ return {
                 })
 
             end
-        }
+        },
+        {
+            "williamboman/mason-lspconfig.nvim"
+        },
+        {
+            "hrsh7th/cmp-nvim-lsp"
+        },
     },
 
     config = function()
