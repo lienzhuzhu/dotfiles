@@ -13,7 +13,7 @@ return {
 
             config = function()
 
-                local mason = require("mason")
+                local mason = require("mason") -- NOTE: this must run before require("mason-lspconfig") call
 
                 mason.setup({
                     pip = {
@@ -30,26 +30,10 @@ return {
 
     config = function()
 
-        local mason_lspconfig = require("mason-lspconfig")
-
-        mason_lspconfig.setup({
-            ensure_installed = {
-                "lua_ls",
-                "pyright",
-                "clangd",
-            },
-            automatic_installation = true
-        })
-
-
-        local lspconfig = require("lspconfig")
-        local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-        local keymap = vim.keymap
-
-        local opts = { noremap = true, silent = true }
-
         local on_attach = function(_, bufnr)
+            local opts = { noremap = true, silent = true }
+            local keymap = vim.keymap
+
             opts.buffer = bufnr
 
             -- set keybinds
@@ -90,27 +74,8 @@ return {
             keymap.set("n", "K", vim.lsp.buf.hover, opts)
         end
 
-        local capabilities = cmp_nvim_lsp.default_capabilities()
-
-        lspconfig["html"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
-
-        lspconfig["cssls"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
-
-        lspconfig["pyright"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
-
-        lspconfig["lua_ls"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = {
+        local servers = {
+            lua_ls = {
                 Lua = {
                     diagnostics = {
                         globals = { "vim" }
@@ -122,18 +87,34 @@ return {
                         }
                     }
                 }
-            }
+            },
+            clangd = {},
+            pyright = {},
+            marksman = {},
+        }
+
+        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+        local capabilities = cmp_nvim_lsp.default_capabilities()
+
+        local mason_lspconfig = require("mason-lspconfig")
+
+        mason_lspconfig.setup({
+            ensure_installed = vim.tbl_keys(servers),
+            automatic_installation = true
         })
 
-        lspconfig["clangd"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach
-        })
+        local lspconfig = require("lspconfig")
 
-        lspconfig["marksman"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach
-        })
+        mason_lspconfig.setup_handlers {
+            function(server_name)
+                lspconfig[server_name].setup({
+                    capabilities = capabilities,
+                    on_attach = on_attach,
+                    settings = servers[server_name],
+                    filetypes = (servers[server_name] or {}).filetypes,
+                })
+            end,
+        }
 
 
         --local signs = { Error = "", Warning = "", Hint = "", Information = "" }
