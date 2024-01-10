@@ -13,7 +13,7 @@ return {
 
             config = function()
 
-                local mason = require("mason") -- NOTE: this must run before require("mason-lspconfig") call
+                local mason = require("mason") -- NOTE: must be called before require("mason-lspconfig")
 
                 mason.setup({
                     pip = {
@@ -93,17 +93,15 @@ return {
             marksman = {},
         }
 
-        local cmp_nvim_lsp = require("cmp_nvim_lsp")
-        local capabilities = cmp_nvim_lsp.default_capabilities()
-
-        local mason_lspconfig = require("mason-lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local lspconfig = require("lspconfig")
+        local mason_lspconfig = require("mason-lspconfig") -- NOTE: must be called after require("mason")
 
         mason_lspconfig.setup({
             ensure_installed = vim.tbl_keys(servers),
             automatic_installation = true
         })
 
-        local lspconfig = require("lspconfig")
 
         mason_lspconfig.setup_handlers {
             function(server_name)
