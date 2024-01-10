@@ -102,7 +102,6 @@ return {
             automatic_installation = true
         })
 
-
         mason_lspconfig.setup_handlers {
             function(server_name)
                 lspconfig[server_name].setup({
