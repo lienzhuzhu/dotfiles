@@ -1,8 +1,8 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -33,4 +33,4 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.swapfile = false
 
---vim.opt.clipboard = "unnamedplus" -- I don't really like sharing the clipboards between system and nvim
+vim.opt.clipboard = "unnamedplus"
