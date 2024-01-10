@@ -1,8 +1,8 @@
 return {
 
     {
-         "christoomey/vim-tmux-navigator",
-         config = false
-     }
+        "christoomey/vim-tmux-navigator",
+        config = false
+    }
 
 }

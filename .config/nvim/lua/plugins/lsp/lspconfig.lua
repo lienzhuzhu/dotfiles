@@ -2,8 +2,30 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false, -- ensure it loads immediately
     dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
-        "williamboman/mason-lspconfig.nvim"
+        {
+            "hrsh7th/cmp-nvim-lsp"
+        },
+        {
+            "williamboman/mason-lspconfig.nvim"
+        },
+        {
+            "williamboman/mason.nvim",
+
+            config = function()
+
+                local mason = require("mason")
+
+                mason.setup({
+                    pip = {
+                        upgrade_pip = true,
+                    },
+                    ui = {
+                        --border = "rounded",
+                    }
+                })
+
+            end
+        }
     },
 
     config = function()

@@ -1,7 +1,9 @@
 return {
     "williamboman/mason.nvim",
     lazy = false, -- ensure it loads immediately
+
     config = function()
+
         local mason = require("mason")
 
         mason.setup({
