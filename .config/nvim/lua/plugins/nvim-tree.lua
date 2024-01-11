@@ -14,7 +14,7 @@ return {
             --respect_buf_cwd = false,
             --sync_root_with_cwd = false,
             view = {
-                width = 80,
+                width = 40,
                 number = true,
                 relativenumber = true,
             },
