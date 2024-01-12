@@ -10,6 +10,9 @@ return {
                 offsets = {
                     {
                         filetype = "neo-tree"
+                    },
+                    {
+                        filetype = "NvimTree"
                     }
                 },
                 mode = "buffers"    -- THIS IS THE DEFAULT VALUE, PASTED HERE FOR REFERENCE 
