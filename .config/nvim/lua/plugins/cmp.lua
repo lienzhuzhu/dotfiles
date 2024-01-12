@@ -32,7 +32,7 @@ return {
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-e>"] = cmp.mapping.abort(),
 
-                --["<A-m>"] = cmp.mapping.complete(), -- NOTE: this is a safe mapping, but I don't really need this functionality
+                --["<C-c>"] = cmp.mapping.complete(), -- NOTE: this is a safe mapping, but I don't really need this functionality
                 ["<C-Space>"] = cmp.config.disable, -- NOTE: so I disabled it here
                 ["<CR>"] = cmp.mapping.confirm(),
 
