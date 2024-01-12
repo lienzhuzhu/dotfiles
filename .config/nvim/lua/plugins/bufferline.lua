@@ -9,7 +9,7 @@ return {
             options = {
                 offsets = {
                     {
-                        filetype = "NvimTree"
+                        filetype = "neo-tree"
                     }
                 },
                 mode = "buffers"    -- THIS IS THE DEFAULT VALUE, PASTED HERE FOR REFERENCE 
