@@ -29,8 +29,9 @@ return {
                 ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
-                ["<C-Space>"] = cmp.config.disable,
                 ["<C-e>"] = cmp.mapping.abort(),
+
+                ["<C-Space>"] = cmp.config.disable,
 
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
