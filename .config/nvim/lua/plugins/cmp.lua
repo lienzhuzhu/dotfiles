@@ -32,8 +32,9 @@ return {
                 ["<C-e>"] = cmp.mapping.abort(),
 
                 ["<C-Space>"] = cmp.config.disable,
+                ["<CR>"] = cmp.config.disable,
 
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                --["<CR>"] = cmp.mapping.confirm({ select = true }),
 
                 ["<Tab>"] = cmp.mapping(
                     function(fallback)
