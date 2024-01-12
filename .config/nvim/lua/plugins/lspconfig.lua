@@ -4,7 +4,7 @@ return {
     dependencies = {
         {
             "williamboman/mason.nvim",
-
+            -- NOTE: consider moving this inside nvim-lspconfig's options function
             config = function()
 
                 local mason = require("mason") -- NOTE: must be called before require("mason-lspconfig")
