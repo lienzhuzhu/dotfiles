@@ -31,12 +31,9 @@ return {
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-e>"] = cmp.mapping.abort(),
-                ["<C-m>"] = cmp.mapping.complete(),
 
                 ["<C-Space>"] = cmp.config.disable,
-                ["<CR>"] = cmp.config.disable,
-
-                --["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<CR>"] = cmp.mapping.confirm(),
 
                 ["<Tab>"] = cmp.mapping(
                     function(fallback)
