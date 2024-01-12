@@ -20,10 +20,12 @@ function lt() {
 # disables the highlighting behavior when pasting
 zle_highlight=('paste:none') 
 
+
 ## ENV Variables ##
 
 export VISUAL=nvim
 export EDITOR=nvim
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 
 ## Basic Auto/tab Complete ##
