@@ -21,11 +21,16 @@ function lt() {
 zle_highlight=('paste:none') 
 
 
-## ENV Variables ##
+### ENV Variables ###
 
 export VISUAL=nvim
 export EDITOR=nvim
+
+## CACHE Paths ##
+
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
+export npm_config_cache="$XDG_CACHE_HOME/npm"
 
 
 ## Basic Auto/tab Complete ##
@@ -37,16 +42,14 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 
-## Vim Mode ##
+### Vim Mode ###
 
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd vv edit-command-line
 bindkey -v
 bindkey "^?" backward-delete-char
 
-
 ## Use Vim Keys In Tab Complete Menu ##
-
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
@@ -94,6 +97,6 @@ function zsh_add_plugin() {
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 #zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
-export ZSH_AUTOSUGGEST_MANUAL_REBIND="foo"
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
 
 bindkey '^[[Z' autosuggest-accept
