@@ -3,12 +3,16 @@ return {
         "nvim-telescope/telescope-ui-select.nvim",
     },
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5', -- FIX: change to automatically use latest version
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.5', -- NOTE: from telescope documentation it is not recommended to use latest master
         dependencies = { 'nvim-lua/plenary.nvim' },
 
         config = function()
 
             require("telescope").setup({
+                defaults = {
+                    layout_strategy = "center",
+                },
                 extensions = {
                     ['ui-select'] = {
                         require("telescope.themes").get_dropdown {
