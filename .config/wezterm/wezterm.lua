@@ -24,6 +24,16 @@ config.window_close_confirmation = "NeverPrompt"
 config.disable_default_key_bindings = true
 config.keys = {
     {
+        key = 'v',
+        mods = 'CMD',
+        action = wezterm.action.PasteFrom "Clipboard",
+    },
+    {
+        key = 'w',
+        mods = 'CMD',
+        action = wezterm.action.CloseCurrentTab { confirm = false },
+    },
+    {
         key = 'P',
         mods = 'CMD',
         action = wezterm.action.ActivateCommandPalette,
