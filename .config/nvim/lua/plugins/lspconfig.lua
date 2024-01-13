@@ -20,9 +20,10 @@ return {
             }
         })
 
+        local mason_lspconfig = require("mason-lspconfig") -- NOTE: must be called after require("mason") call
+
         local capabilities = require("cmp_nvim_lsp").default_capabilities() -- NOTE: used in mason_lspconfig.setup_handlers()
         local lspconfig = require("lspconfig") -- NOTE: used in mason_lspconfig.setup_handlers()
-        local mason_lspconfig = require("mason-lspconfig") -- NOTE: must be called after require("mason") call
 
         local on_attach = function(_, bufnr)
             local opts = { noremap = true, silent = true }
