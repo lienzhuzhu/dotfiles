@@ -3,6 +3,10 @@ local wezterm = require("wezterm")
 local config = {}
 
 
+-- General terminal emulator settings
+--
+config.audible_bell = "Disabled"
+
 
 -- Window settings
 --
@@ -14,18 +18,30 @@ config.initial_cols = 170
 config.initial_rows = 48
 config.window_close_confirmation = "NeverPrompt"
 
--- General terminal emulator settings
---
-config.audible_bell = "Disabled"
-
 
 -- Keymap settings
 --
+config.disable_default_key_bindings = true
 config.keys = {
     {
         key = 'P',
         mods = 'CMD',
         action = wezterm.action.ActivateCommandPalette,
+    },
+    {
+        key = 'n',
+        mods = 'CMD',
+        action = wezterm.action.SpawnWindow,
+    },
+    {
+        key = 'r',
+        mods = 'CMD',
+        action = wezterm.action.ReloadConfiguration,
+    },
+    {
+        key = 'q',
+        mods = 'CMD',
+        action = wezterm.action.QuitApplication
     },
 }
 
@@ -112,6 +128,14 @@ config.colors = {
 --
 config.font_size = 18.0
 config.font = wezterm.font("SauceCodePro Nerd Font")
+
+
+-- Command Palette
+--
+config.command_palette_bg_color = "#12120f"
+config.command_palette_fg_color = "#c5c9c5"
+config.command_palette_font_size = 23.0
+--config.command_palette_rows = 5
 
 
 return config
