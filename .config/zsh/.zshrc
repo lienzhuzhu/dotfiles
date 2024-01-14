@@ -25,7 +25,7 @@ zle_highlight=('paste:none')
 
 export VISUAL=nvim
 export EDITOR=nvim
-export PYENV_ROOT="~/.pyenv"
+export PYENV_ROOT="$HOME/.pyenv"
 
 ## CACHE Paths ##
 
