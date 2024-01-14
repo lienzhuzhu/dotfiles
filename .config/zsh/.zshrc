@@ -25,13 +25,13 @@ zle_highlight=('paste:none')
 
 export VISUAL=nvim
 export EDITOR=nvim
+export PYENV_ROOT="~/.pyenv"
 
 ## CACHE Paths ##
 
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
 export npm_config_cache="$XDG_CACHE_HOME/npm"
-
 
 ## Basic Auto/tab Complete ##
 
