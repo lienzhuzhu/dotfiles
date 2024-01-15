@@ -15,8 +15,8 @@ return {
             --sync_root_with_cwd = false,
             view = {
                 width = 40,
-                number = true,
-                relativenumber = true,
+                --number = true,
+                --relativenumber = true,
             },
             actions = {
                 open_file = {
