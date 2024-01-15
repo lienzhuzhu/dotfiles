@@ -24,7 +24,11 @@ return {
                     window_picker = {
                         enable = false
                     }
-                }
+                },
+                expand_all = {
+                    max_folder_discovery = 300, -- default
+                    exclude = {".git", "target", "build"},
+                },
             },
             filters = {
                 custom = { ".DS_Store" },
