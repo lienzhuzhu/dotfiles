@@ -12,7 +12,9 @@ return {
                         filetype = "neo-tree"
                     },
                     {
-                        filetype = "NvimTree"
+                        filetype = "NvimTree",
+                        --text = "File Explorer", -- NOTE: this line and the one below are an optional title for nvim-tree when it is open, I prefer no title
+                        --text_align = "center",
                     }
                 },
                 mode = "buffers"    -- THIS IS THE DEFAULT VALUE, PASTED HERE FOR REFERENCE 
