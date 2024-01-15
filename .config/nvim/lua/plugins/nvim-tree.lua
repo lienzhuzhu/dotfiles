@@ -9,14 +9,16 @@ return {
     config = function()
 
         require("nvim-tree").setup ({
+            hijack_cursor = true,
             hijack_unnamed_buffer_when_opening = true,
             --reload_on_bufenter = false,
             --respect_buf_cwd = false,
             --sync_root_with_cwd = false,
             view = {
+                cursorline = true,
                 width = 40,
-                --number = true,
-                --relativenumber = true,
+                number = true,
+                relativenumber = true,
             },
             actions = {
                 open_file = {
