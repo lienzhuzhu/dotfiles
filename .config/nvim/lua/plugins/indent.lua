@@ -6,7 +6,9 @@ return {
     config = function ()
 
         --vim.opt.list = true
-        --vim.opt.listchars:append "eol:↴"
+        --vim.opt.listchars = {
+        --    eol = "↴"
+        --}
 
         require("ibl").setup({
             indent = {
