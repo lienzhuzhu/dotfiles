@@ -17,7 +17,7 @@ return {
         require("lualine").setup({
             options = {
                 icons_enabled = true,
-                theme = "seoul256",
+                theme = "auto",
                 disabled_filetypes = {
                     statusline = { "NvimTree" }
                 }
