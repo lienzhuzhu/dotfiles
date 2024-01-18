@@ -23,8 +23,11 @@ zle_highlight=('paste:none')
 
 ### ENV Variables ###
 
-export CPLUS_INCLUDE_PATH="/usr/local/include/"
-export CPLUS_INCLUDE_PATH="/opt/homebrew/include:$CPLUS_INCLUDE_PATH" # Eigen and other homebrew installed libraries
+export CPLUS_INCLUDE_PATH="/usr/local/include"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/homebrew/include" # Eigen and other homebrew installed libraries
+export CPATH="/usr/local/include"
+export CPATH="$CPATH:/opt/homebrew/include"
+export LIBRARY_PATH="/usr/local/lib"
 export VISUAL=nvim
 export EDITOR=nvim
 export PYENV_ROOT="$HOME/.pyenv"
