@@ -66,7 +66,8 @@ config.colors = {
 -- Font settings
 --
 config.font_size = 18.0
-config.font = wezterm.font("SauceCodePro Nerd Font")
+--config.font = wezterm.font("SauceCodePro Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 
 -- Command Palette
