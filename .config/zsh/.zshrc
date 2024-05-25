@@ -31,6 +31,7 @@ export LIBRARY_PATH="/usr/local/lib"
 export VISUAL=nvim
 export EDITOR=nvim
 export PYENV_ROOT="$HOME/.pyenv"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 ## CACHE Paths ##
 
