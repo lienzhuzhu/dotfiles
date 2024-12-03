@@ -1,5 +1,19 @@
 neofetch # fancy
 
+
+### ENV Variables ###
+
+export CPLUS_INCLUDE_PATH="/usr/local/include"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/homebrew/include" # Eigen and other homebrew installed libraries
+export CPATH="/usr/local/include"
+export CPATH="$CPATH:/opt/homebrew/include"
+export LIBRARY_PATH="/usr/local/lib"
+export VISUAL=nvim
+export EDITOR=nvim
+export PYENV_ROOT="$HOME/.pyenv"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+
+
 eval "$(starship init zsh)" # use starship prompt
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
@@ -20,18 +34,6 @@ function lt() {
 # disables the highlighting behavior when pasting
 zle_highlight=('paste:none') 
 
-
-### ENV Variables ###
-
-export CPLUS_INCLUDE_PATH="/usr/local/include"
-export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/homebrew/include" # Eigen and other homebrew installed libraries
-export CPATH="/usr/local/include"
-export CPATH="$CPATH:/opt/homebrew/include"
-export LIBRARY_PATH="/usr/local/lib"
-export VISUAL=nvim
-export EDITOR=nvim
-export PYENV_ROOT="$HOME/.pyenv"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 ## CACHE Paths ##
 
