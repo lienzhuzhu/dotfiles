@@ -10,13 +10,16 @@ export CPATH="$CPATH:/opt/homebrew/include"
 export LIBRARY_PATH="/usr/local/lib"
 export VISUAL=nvim
 export EDITOR=nvim
-export PYENV_ROOT="$HOME/.pyenv"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 
 eval "$(starship init zsh)" # use starship prompt
-eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 alias vim='nvim'
 alias python='python3'
