@@ -83,7 +83,6 @@ return {
                     }
                 }
             },
-            clangd = {},
             pyright = {},
             marksman = {},
         }
