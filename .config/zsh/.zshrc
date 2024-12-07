@@ -3,41 +3,25 @@ neofetch # fancy
 
 ### ENV Variables ###
 
-export CPLUS_INCLUDE_PATH="/usr/local/include"
-export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/opt/homebrew/include" # Eigen and other homebrew installed libraries
-export CPATH="/usr/local/include"
-export CPATH="$CPATH:/opt/homebrew/include"
-export LIBRARY_PATH="/usr/local/lib"
 export VISUAL=nvim
 export EDITOR=nvim
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
-
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 eval "$(starship init zsh)" # use starship prompt
-eval "$(rbenv init -)"
 
 alias vim='nvim'
 alias python='python3'
-alias ls='colorls --sd -a'
 
-# colorls --tree alias
-function lt() {
-    if [[ -n $1 ]]; then
-        colorls --tree=$1
-    else
-        colorls --tree
-    fi
-}
 
 # disables the highlighting behavior when pasting
 zle_highlight=('paste:none') 
 
 
 ## CACHE Paths ##
-
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
 export npm_config_cache="$XDG_CACHE_HOME/npm"
+
 
 ## Basic Auto/tab Complete ##
 

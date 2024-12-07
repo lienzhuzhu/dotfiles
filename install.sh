@@ -10,7 +10,6 @@
 # - Starship.rs
 
 
-
 # Detect the OS
 if [[ "$(uname)" == "Darwin" ]]; then
     this_system="macOS"
@@ -54,8 +53,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # nvim configs
 rm -rf ~/.local/share/nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim         # install packer
 rm -rf ~/.config/nvim                                           # cleans out any existing nvim
 ln -s "$pwd/nvim ~/.config/nvim"                                # create link
 
@@ -82,10 +79,6 @@ ln -s "$repo_dir/alacritty ~/.config/alacritty"
 cd ~/.config/alacritty
 alacritty migrate
 rm alacritty.yml
-
-
-# INSTALL tmux TPM
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 # starship prompt config

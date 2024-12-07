@@ -1,9 +1,5 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-##
-# Your previous /Users/lienzhu/.zprofile file was backed up as /Users/lienzhu/.zprofile.macports-saved_2023-12-20_at_21:41:15
-##
-
 # MacPorts Installer addition on 2023-12-20_at_21:41:15: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
