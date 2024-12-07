@@ -11,4 +11,4 @@
 # %m => shortname host
 # %(?..) => prompt conditional - %(condition.true.false)
 
-PROMPT=$'%F{white}%~ %B%F{blue}>%f%b '
+PROMPT=$'%F{red}YT:AcademicCrashout%f in %F{white}%~ %B%F{blue}>%f%b '

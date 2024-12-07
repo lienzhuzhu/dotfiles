@@ -4,7 +4,6 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 export HISTSIZE=10000                               # Maximum events for internal history
 export SAVEHIST=10000                               # Maximum events in history file
-export HISTFILE="$XDG_CACHE_HOME/zsh/history"       # History filepath
 
 ## CACHE Paths ##
 export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
