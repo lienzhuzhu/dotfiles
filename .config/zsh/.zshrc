@@ -1,26 +1,10 @@
 neofetch # fancy
 
-
-### ENV Variables ###
-
-export VISUAL=nvim
-export EDITOR=nvim
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-
-eval "$(starship init zsh)" # use starship prompt
-
-alias vim='nvim'
-alias python='python3'
-
+source "$ZDOTDIR/env"
+source "$ZDOTDIR/aliases"
 
 # disables the highlighting behavior when pasting
 zle_highlight=('paste:none') 
-
-
-## CACHE Paths ##
-export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
-export npm_config_cache="$XDG_CACHE_HOME/npm"
 
 
 ## Basic Auto/tab Complete ##
@@ -68,25 +52,3 @@ bindkey '^R' history-incremental-search-backward
 #export LS_COLORS="di=1;33;40" # Linux
 export LSCOLORS=dxfxcxdxbxgexexabagacad # BSD/ MacOS
 export CLICOLOR=1
-
-function zsh_add_file() {
-    [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
-}
-
-function zsh_add_plugin() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then 
-        # For plugins
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
-    else
-        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
-    fi
-}
-
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-
-export ZSH_AUTOSUGGEST_MANUAL_REBIND=true
-
-bindkey '^[[Z' autosuggest-accept
