@@ -4,8 +4,9 @@ neofetch # fancy
 #+---------------------+#
 # Source External Files #
 #+---------------------+#
-source "$ZDOTDIR/env"
-source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/env.sh"
+source "$ZDOTDIR/aliases.sh"
+source "$ZDOTDIR/prompt.sh"
 
 
 #+-----------------------+#
