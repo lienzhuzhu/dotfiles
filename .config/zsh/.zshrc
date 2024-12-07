@@ -62,3 +62,11 @@ export CLICOLOR=1
 zle_highlight=('paste:none') # Disables highlight after pasting
 
 bindkey '^R' history-incremental-search-backward
+
+
+#+-----------+#
+# pyenv setup
+#+-----------+#
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
