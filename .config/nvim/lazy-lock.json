@@ -14,7 +14,7 @@
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "nvim-cmp": { "branch": "main", "commit": "ca4d3330d386e76967e53b85953c170658255ecb" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb" },
-  "nvim-lspconfig": { "branch": "master", "commit": "47f236c058f0511702286a21ba53bbf42abbd8a8" },
+  "nvim-lspconfig": { "branch": "master", "commit": "fc16fd4f9c5d72b45db0f45ee275db3a9a30481a" },
   "nvim-tree.lua": { "branch": "master", "commit": "375e38673b5c61debd8074ced01cfd4f3b7ce1e9" },
   "nvim-treesitter": { "branch": "master", "commit": "3b8dee4293567b0b9a87360842af14669f60dd13" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "ad8f0a472148c3e0ae9851e26a722ee4e29b1595" },
@@ -25,5 +25,5 @@
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "trouble.nvim": { "branch": "main", "commit": "46cf952fc115f4c2b98d4e208ed1e2dce08c9bf6" },
   "vim-tmux-navigator": { "branch": "master", "commit": "424b5caa154bff34dc258ee53cec5a8e36cf7ea8" },
-  "vimtex": { "branch": "master", "commit": "a863c7f7db5ae38a49e2d9fe5e6dca3460c00e20" }
+  "vimtex": { "branch": "master", "commit": "de42a9a5e4e24253201256953133efdf488906ae" }
 }

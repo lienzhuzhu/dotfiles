@@ -4,7 +4,6 @@ return {
 
     config = function()
 
-        require("foo")
 
     end
 }
