@@ -6,14 +6,6 @@ return {
 
         local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-        require('lualine').setup({
-            options = {
-                disabled_filetypes = {
-                    statusline = { "NvimTree" }
-                }
-            }
-        })
-
         require("lualine").setup({
             options = {
                 icons_enabled = true,
