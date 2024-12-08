@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {
     dev = {
-        path = "~/computing/nvim-projects/"
+        path = "~/armory/nvim-projects/"
     },
     ui = {
         -- a number <1 is a percentage., >1 is a fixed size

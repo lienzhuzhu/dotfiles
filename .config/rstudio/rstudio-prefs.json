@@ -1,0 +1,8 @@
+{
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "bash",
+    "default_project_location": "~/armory",
+    "editor_keybindings": "vim"
+}
