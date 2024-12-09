@@ -21,4 +21,4 @@ zstyle ':vcs_info:git:*' formats '%b'
 zstyle ':vcs_info:*' enable git
 
 setopt PROMPT_SUBST
-export PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{white}%~%f on %B%F{red}${vcs_info_msg_0_}%f%b %B%F{blue}>%f%b '
+PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{white}%~%f on %B%F{red}${vcs_info_msg_0_}%f%b %B%F{blue}>%f%b '
