@@ -1,4 +1,9 @@
-neofetch # fancy
+#+------------------+#
+# Lien Zhu's zshrc   #
+#+------------------+#
+
+
+#neofetch # Weird flex but okay
 
 
 #+---------------------+#
@@ -6,7 +11,10 @@ neofetch # fancy
 #+---------------------+#
 source "$ZDOTDIR/env.sh"
 source "$ZDOTDIR/aliases.sh"
+
+#+-- Prompt --+#
 source "$ZDOTDIR/prompt.sh"
+#source "$ZDOTDIR/pure.sh"
 
 
 #+-----------------------+#
