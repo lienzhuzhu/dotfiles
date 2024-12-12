@@ -1,8 +1,46 @@
 {
     "save_workspace": "never",
     "load_workspace": false,
-    "initial_working_directory": "~",
-    "posix_terminal_shell": "bash",
+    "initial_working_directory": "~/armory",
+    "posix_terminal_shell": "zsh",
     "default_project_location": "~/armory",
-    "editor_keybindings": "vim"
+    "editor_keybindings": "vim",
+    "restore_source_documents": false,
+    "restore_last_project": false,
+    "python_type": "system",
+    "python_version": "3.13.1",
+    "python_path": "~/.pyenv/versions/3.13.1/bin/python",
+    "font_size_points": 12,
+    "panes": {
+        "quadrants": [
+            "Console",
+            "TabSet1",
+            "Source",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer",
+            "Presentations",
+            "Presentation"
+        ],
+        "tabSet2": [],
+        "hiddenTabSet": [
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial"
+        ],
+        "console_left_on_top": true,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "editor_theme": "Material",
+    "rmd_viewer_type": "pane",
+    "console_line_length_limit": 1080
 }
