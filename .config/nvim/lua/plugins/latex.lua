@@ -13,7 +13,6 @@ return {
 
         vim.g.vimtex_view_method = "sioyek"
 
-
         vim.keymap.set("n", "<leader>lc", "<cmd>VimtexCompile<CR>", {})
 
     end
