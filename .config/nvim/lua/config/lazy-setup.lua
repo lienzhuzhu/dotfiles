@@ -16,6 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
+    spec = {
+        { import = "plugins" },
+    },
     dev = {
         path = "~/armory/nvim-projects/"
     },
@@ -63,9 +66,4 @@ local opts = {
     },
 }
 
-require("lazy").setup({
-    opts,
-    spec = {
-        { import = "plugins" },
-    },
-})
+require("lazy").setup(opts)
