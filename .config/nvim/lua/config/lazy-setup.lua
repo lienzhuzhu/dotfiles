@@ -64,6 +64,9 @@ local opts = {
     change_detection = {
         notify = false
     },
+    install = {
+        colorscheme = { "kanagawa" },
+    },
 }
 
 require("lazy").setup(opts)

@@ -7,7 +7,10 @@ return {
         },
         scope = {
             enabled = false
-        }
+        },
+        exclude = {
+            filetypes = { "dashboard" },
+        },
     },
     init = function ()
         --vim.opt.list = true
