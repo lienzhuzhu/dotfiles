@@ -1,6 +1,6 @@
 return {
     "lervag/vimtex",
-
+    enabled = false,
     init = function()
 
         vim.g.tex_flavor = "latex"

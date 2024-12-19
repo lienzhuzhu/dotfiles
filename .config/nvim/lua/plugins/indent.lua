@@ -1,23 +1,18 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    opts = {},
-
-    config = function ()
-
+    opts = {
+        indent = {
+            char = "▏",
+        },
+        scope = {
+            enabled = false
+        }
+    },
+    init = function ()
         --vim.opt.list = true
         --vim.opt.listchars = {
         --    eol = "↴"
         --}
-
-        require("ibl").setup({
-            indent = {
-                char = "▏",
-            },
-            scope = {
-                enabled = false
-            }
-        })
-
     end
 }

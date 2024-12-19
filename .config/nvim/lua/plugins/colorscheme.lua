@@ -2,10 +2,7 @@ return {
     "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
-
-    config = function()
-
-        require('kanagawa').setup({
+    opts = {
             compile = false,
             undercurl = true,
             commentStyle = { italic = true },
@@ -187,7 +184,9 @@ return {
                 dark = "dragon",
                 light = "wave"
             },
-        })
+    },
+
+    init = function ()
 
         vim.cmd("colorscheme kanagawa-dragon")
 
@@ -196,6 +195,5 @@ return {
         --vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none" })
         --vim.api.nvim_set_hl(0, "CursorLineNr", { ctermbg = "none" })
         --vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = "none" })
-
     end
 }
