@@ -18,6 +18,9 @@ SCRIPT_PATH="$(realpath "$0")"
 # Get the parent directory of the script
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 
+# TODO: Read in dotfiles directory
+DOTFILES_DIR="${HOME}/dotfiles"
+
 
 # Detect the OS
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -51,6 +54,8 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew install fd ripgrep rust
 
 
+
+
 rm -rf "${HOME}/.local/share/nvim" #TODO: Use env variables, the problem is ZDOTDIR and XDG_* might not be exported yet...
-rm -rf "${HOME}/.config"
-ln -s "${pwd}/.config ~/.config/"
+rm -rf "${XDG_CONFIG_HOME}"
+ln -s "${DOTFILES_DIR}/config-mac ~/.config"
