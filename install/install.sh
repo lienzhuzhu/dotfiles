@@ -55,33 +55,3 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rm -rf ~/.local/share/nvim
 rm -rf ~/.config/nvim                                           # cleans out any existing nvim
 ln -s "$pwd/nvim ~/.config/nvim"                                # create link
-
-
-# INSTALL: alacritty
-git clone https://github.com/alacritty/alacritty.git ~/alacritty
-cd ~/alacritty
-rustup override set stable # ensure the right version of Rust compiler
-rustup update stable
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-if [[ "$this_system" == "macOS" ]]; then
-    make app
-    cp -r target/release/osx/Alacritty.app /Applications/
-else
-    cargo build --release
-    sudo cp target/release/alacritty /usr/bin/
-fi
-
-
-# CONFIG: alacritty
-cd "$repo_dir"
-rm -rf ~/.config/alacritty
-ln -s "$repo_dir/alacritty ~/.config/alacritty"
-cd ~/.config/alacritty
-alacritty migrate
-rm alacritty.yml
-
-
-# starship prompt config
-cd "$repo_dir"
-rm -f ~/.config/starship.toml
-ln -s "$repo_dir/starship.toml ~/.config/starship.toml"
