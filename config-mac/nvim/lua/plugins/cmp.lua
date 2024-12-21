@@ -74,10 +74,10 @@ return {
                 ghost_text = true
             },
             sources = cmp.config.sources({
-                { name = "nvim_lsp" },
-                { name = "luasnip" },
-                { name = "buffer" },
-                { name = "path" }
+                { name = "nvim_lsp" }, -- cmp-nvim-lsp in LSP specification
+                { name = "luasnip" }, -- cmp_luasnip
+                { name = "buffer" }, -- cmp-buffer
+                { name = "path" }, -- cmp-path
             })
         })
 
