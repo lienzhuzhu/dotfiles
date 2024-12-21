@@ -2,6 +2,16 @@ return {
     "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
+    init = function ()
+
+        vim.cmd("colorscheme kanagawa-dragon")
+
+        --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        --vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none" })
+        --vim.api.nvim_set_hl(0, "CursorLineNr", { ctermbg = "none" })
+        --vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = "none" })
+    end,
     opts = {
         compile = false,
         undercurl = true,
@@ -185,15 +195,4 @@ return {
             light = "wave"
         },
     },
-
-    init = function ()
-
-        vim.cmd("colorscheme kanagawa-dragon")
-
-        --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-        --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        --vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none" })
-        --vim.api.nvim_set_hl(0, "CursorLineNr", { ctermbg = "none" })
-        --vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = "none" })
-    end
 }

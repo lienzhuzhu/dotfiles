@@ -1,9 +1,10 @@
 return {
     'stevearc/oil.nvim',
-    opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    init = function ()
+    opts = function ()
         local opts = { noremap = true, silent = true }
         vim.keymap.set("n", "<leader>t", "<cmd>Oil<CR>", opts)
+
+        return {}
     end
 }

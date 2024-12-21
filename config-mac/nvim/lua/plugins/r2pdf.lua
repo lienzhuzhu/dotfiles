@@ -3,10 +3,11 @@ return {
     enabled = true,
     dev = true,
     ft = "rmd",
-    opts = {},
-    init = function ()
+    opts = function ()
         local opts = { noremap = true, silent = true }
         vim.keymap.set("n", "<leader>rp", "<cmd>R2PDF<CR>", opts)
+
+        return {}
     end
 
 }
