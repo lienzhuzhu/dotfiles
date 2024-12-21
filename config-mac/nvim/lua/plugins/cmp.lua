@@ -81,7 +81,5 @@ return {
             })
         })
 
-        require("snippets.rmd")
-
     end
 }

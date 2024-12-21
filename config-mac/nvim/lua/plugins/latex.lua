@@ -1,6 +1,6 @@
 return {
     "lervag/vimtex",
-    enabled = false,
+    enabled = true,
     init = function()
 
         vim.g.tex_flavor = "latex"
@@ -12,8 +12,6 @@ return {
         --vim.g.vimtex_view_skim_sync = 1
 
         vim.g.vimtex_view_method = "sioyek"
-
-        vim.keymap.set("n", "<leader>lc", "<cmd>VimtexCompile<CR>", {})
 
     end
 }
