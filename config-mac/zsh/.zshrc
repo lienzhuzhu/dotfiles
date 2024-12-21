@@ -3,7 +3,7 @@
 #+------------------+#
 
 
-#neofetch # Weird flex but okay
+pfetch # style
 
 
 #+---------------------+#
