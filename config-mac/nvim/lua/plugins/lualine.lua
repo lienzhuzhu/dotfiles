@@ -2,7 +2,7 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = function ()
-        local status = require("lazy.status")
+        local ls = require("lazy.status")
         return {
             options = {
                 icons_enabled = true,
@@ -14,8 +14,8 @@ return {
             sections = {
                 lualine_x = {
                     {
-                        status.updates,
-                        cond = status.has_updates,
+                        ls.updates,
+                        cond = ls.has_updates,
                         color = { fg = "#E6C384" },
                     },
                     { "encoding" },
