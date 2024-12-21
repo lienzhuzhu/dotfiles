@@ -2,27 +2,25 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     dependencies = {
-        "williamboman/mason.nvim",
+        {
+            "williamboman/mason.nvim",
+            opts = {
+                pip = {
+                    upgrade_pip = true,
+                },
+                ui = {
+                    border = "rounded",
+                }
+            }
+        },
+
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp"
     },
+    init = function()
 
-    config = function()
+        local mason_lspconfig = require("mason-lspconfig")
 
-        local mason = require("mason") -- NOTE: must be called before require("mason-lspconfig")
-
-        mason.setup({
-            pip = {
-                upgrade_pip = true,
-            },
-            ui = {
-                border = "rounded",
-            }
-        })
-
-        local mason_lspconfig = require("mason-lspconfig")                  -- NOTE: must be called after require("mason") call
-
-        local capabilities = require("cmp_nvim_lsp").default_capabilities() -- NOTE: used in mason_lspconfig.setup_handlers()
         local lspconfig = require("lspconfig")                              -- NOTE: used in mason_lspconfig.setup_handlers()
 
         local on_attach = function(_, bufnr)
@@ -33,7 +31,7 @@ return {
 
             -- set keybinds
             opts.desc = "Show LSP references"
-            keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+            keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
 
             opts.desc = "Go to declaration"
             keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -95,7 +93,7 @@ return {
         mason_lspconfig.setup_handlers {
             function(server_name)
                 lspconfig[server_name].setup({
-                    capabilities = capabilities,
+                    capabilities = require("cmp_nvim_lsp").default_capabilities(),
                     on_attach = on_attach,
                     settings = servers[server_name],
                     filetypes = (servers[server_name] or {}).filetypes,
