@@ -5,11 +5,10 @@
 *.py[cod]
 *$py.class
 
-.config/tmux/plugins/*
-!.config/tmux/plugins/tpm
+config-mac/tmux/plugins/*
 
-.config/zsh/plugins/
-.config/zsh/.zcompdump
-.config/zsh/.zsh_history
+config-mac/zsh/plugins/
+config-mac/zsh/.zcompdump
+config-mac/zsh/.zsh_history
 
 .config/wezterm/inspo/
