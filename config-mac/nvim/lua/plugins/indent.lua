@@ -9,7 +9,7 @@ return {
             enabled = false
         },
         exclude = {
-            filetypes = { "dashboard" },
+            filetypes = { "dashboard", "markdown", "rmd" },
         },
     },
     init = function ()

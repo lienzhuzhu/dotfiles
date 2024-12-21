@@ -42,6 +42,9 @@ return {
                 include_surrounding_whitespace = true,
             },
         },
+        indent = {
+            enable = false,
+        }
     },
     main = "nvim-treesitter.configs",
 }

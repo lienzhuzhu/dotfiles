@@ -18,7 +18,7 @@ SCRIPT_PATH="$(realpath "$0")"
 # Get the parent directory of the script
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 
-# TODO: Read in dotfiles directory
+# TODO: Make this interactive. Read in the user specified dotfiles directory.
 DOTFILES_DIR="${HOME}/dotfiles"
 
 
