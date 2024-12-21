@@ -12,10 +12,4 @@ return {
             filetypes = { "dashboard", "markdown", "rmd" },
         },
     },
-    init = function ()
-        --vim.opt.list = true
-        --vim.opt.listchars = {
-        --    eol = "↴"
-        --}
-    end
 }

@@ -17,3 +17,9 @@ vim.keymap.set("x", "p", [["_dP]])
 
 vim.keymap.set("n", "<C-t>", "<cmd>terminal<CR>", opts)
 vim.keymap.set('t', "<Esc>", [[<C-\><C-n>]], opts)
+
+-- Split movement
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
