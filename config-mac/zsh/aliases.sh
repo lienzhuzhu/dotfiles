@@ -1,7 +1,7 @@
 alias vim='nvim'
 alias python='python3'
 
-gs() {
+gstat() {
     git status 
 }
 
