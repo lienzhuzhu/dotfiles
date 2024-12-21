@@ -25,7 +25,6 @@ return {
                 lookahead = true,
 
                 keymaps = {
-                    -- NOTE: May need to remap keybindings to prevent interference
                     ["af"] = "@function.outer",
                     ["if"] = "@function.inner",
                     ["ap"] = "@parameter.outer",

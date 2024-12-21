@@ -4,11 +4,6 @@ return {
     --event = "BufReadPre",   -- might be necessary to prevent race conditions
     opts = {
         options = {
-            offsets = {
-                {
-                    filetype = "NvimTree",
-                }
-            },
             -- THIS DEFAULT VALUE REQUIRES THAT nvim-cmp LOADS ON START
             mode = "buffers"    -- THIS IS THE DEFAULT VALUE, PASTED HERE FOR REFERENCE 
         }

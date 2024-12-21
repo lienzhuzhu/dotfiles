@@ -6,17 +6,20 @@ return {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5', -- NOTE: from telescope documentation it is not recommended to use latest master
         dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = {
-            defaults = {
-                layout_strategy = "center",
-            },
-            extensions = {
-                ['ui-select'] = {
-                    require("telescope.themes").get_dropdown {
+        opts = function ()
+            local themes = require("telescope.themes")
+            return {
+                defaults = {
+                    layout_strategy = "center",
+                },
+                extensions = {
+                    ['ui-select'] = {
+                        themes.get_dropdown {
+                        }
                     }
                 }
             }
-        },
+        end,
         init = function()
             local builtin = require("telescope.builtin")
 

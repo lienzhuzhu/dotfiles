@@ -1,7 +1,8 @@
 return {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
-    config = function()
+    dependencies = { {'nvim-tree/nvim-web-devicons'}},
+    opts = function ()
 
         local function get_art()
             return
@@ -16,7 +17,7 @@ return {
                 ""
         end
 
-        require("dashboard").setup({
+        return {
             theme = 'hyper',
             config = {
                 header = {
@@ -40,7 +41,6 @@ return {
                     },
                 },
             },
-        })
+        }
     end,
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
