@@ -27,4 +27,3 @@ zstyle ':vcs_info:*' enable git
 
 setopt PROMPT_SUBST
 PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{white}%~%f${vcs_info_msg_0_} %B%F{blue}>%f%b '
-
