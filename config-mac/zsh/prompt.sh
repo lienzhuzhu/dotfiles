@@ -1,21 +1,14 @@
-# Pure Elegance
+# Elegance Over All
 # by Lien Zhu
 # https://github.com/lienzhuzhu/dotfiles
-
-# prompt:
-# %F => color dict
-# %f => reset color
-# %~ => current path
-# %* => time
-# %n => username
-# %m => shortname host
-# %(?..) => prompt conditional - %(condition.true.false)
 
 # Load version control information
 autoload -Uz vcs_info
 precmd() {
-    vcs_info
     check_unstaged_changes
+    # Dynamically update the vcs_info format to include the unstaged icon
+    zstyle ':vcs_info:git:*' formats " on %B%F{red}%b%f${GIT_UNSTAGED_ICON}"
+    vcs_info
 }
 
 # Function to check if there are unstaged changes in a Git repo
@@ -28,9 +21,9 @@ check_unstaged_changes() {
     fi
 }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats ' on %B%F{red}%b%f'
+# Enable vcs_info for git
 zstyle ':vcs_info:*' enable git
 
 setopt PROMPT_SUBST
-PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{white}%~%f${vcs_info_msg_0_}${GIT_UNSTAGED_ICON} %B%F{blue}>%f%b '
+PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{white}%~%f${vcs_info_msg_0_} %B%F{blue}>%f%b '
+
