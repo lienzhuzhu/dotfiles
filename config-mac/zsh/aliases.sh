@@ -1,11 +1,12 @@
 alias vim='nvim'
 alias python='python3'
 
+# git status
 s() {
     git status 
 }
 
-# alias: git commit -am "<commit message>; git push"
+# git commit -am "<commit message>; git push"
 gc() {
     if [ $# -eq 0 ]; then
         echo "Error: Commit message is required."
@@ -15,7 +16,7 @@ gc() {
     git push
 }
 
-#alias: git add -A && git commit -m "<commit message>; git push"
+# git add -A && git commit -m "<commit message>; git push"
 ga() {
     if [ $# -eq 0 ]; then
         echo "Error: Commit message is required."
@@ -25,10 +26,15 @@ ga() {
     git push
 }
 
-#alias: git diff
+# git diff
 gd() {
     git diff
 }
 
-#alias: better ls
+# better ls
 alias ls='ls -F'
+
+# cd into braindump
+bd() {
+    cd ~/armory/braindump/
+}
