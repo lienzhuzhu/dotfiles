@@ -40,3 +40,5 @@ vim.opt.shortmess:append("c")
 vim.opt.shortmess:append("a")
 vim.opt.shortmess:append("F")
 vim.opt.shortmess:append("I")
+
+vim.opt.splitright = true
