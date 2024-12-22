@@ -1,7 +1,7 @@
 alias vim='nvim'
 alias python='python3'
 
-gstat() {
+s() {
     git status 
 }
 
@@ -29,3 +29,6 @@ ga() {
 gd() {
     git diff
 }
+
+#alias: better ls
+alias ls='ls -F'
