@@ -15,8 +15,9 @@ precmd() {
 check_unstaged_changes() {
     GIT_UNSTAGED_ICON=""  # Reset the icon
     if git rev-parse --is-inside-work-tree &>/dev/null; then
-        if ! git diff --quiet; then
-            GIT_UNSTAGED_ICON="%F{red} %f"  # Red  icon for unstaged changes
+        # Check for unstaged changes or untracked files
+        if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            GIT_UNSTAGED_ICON="%F{red} %f"  # Red fire icon for unstaged changes or new files
         fi
     fi
 }

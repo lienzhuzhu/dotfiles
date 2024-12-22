@@ -15,7 +15,6 @@ gc() {
     git push
 }
 
-
 #alias: git add -A && git commit -m "<commit message>; git push"
 ga() {
     if [ $# -eq 0 ]; then
@@ -24,4 +23,9 @@ ga() {
     fi
     git add -A && git commit -m "$@"
     git push
+}
+
+#alias: git diff
+gd() {
+    git diff
 }
