@@ -34,10 +34,9 @@ return {
                 ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
-                ["<C-e>"] = cmp.mapping.abort(),
+                ["<C-e>"] = cmp.mapping.abort(), -- NOTE: very useful.
 
-                --["<C-c>"] = cmp.mapping.complete(), -- NOTE: this is a safe mapping, but I don't really need this functionality
-                ["<C-Space>"] = cmp.config.disable, -- NOTE: so I disabled it here
+                --["<C-Space>"] = cmp.config.disable, -- NOTE: cmp.mapping.complete() opens the completion menu if it's not already open, useless and collides with tmux prefix.
                 ["<CR>"] = cmp.mapping.confirm(),
 
                 ["<Tab>"] = cmp.mapping(
