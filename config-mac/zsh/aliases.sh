@@ -38,3 +38,8 @@ alias ls='ls -F'
 bd() {
     cd ~/armory/braindump/
 }
+
+# Initial commit
+init() {
+    git add -A && git commit -m "init"
+}
