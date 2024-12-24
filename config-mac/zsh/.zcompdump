@@ -1,6 +1,7 @@
-#files: 966	version: 5.9
+#files: 976	version: 5.9
 
 _comps=(
+''\''brew' '_brew_services'
 '-' '_precommand'
 '-array-value-' '_value'
 '-assign-parameter-' '_assign'
@@ -199,6 +200,7 @@ _comps=(
 'bpython3-gtk' '_bpython'
 'bpython3-urwid' '_bpython'
 'brctl' '_brctl'
+'brew' '_brew'
 'bsdconfig' '_bsdconfig'
 'bsdgrep' '_grep'
 'bsdinstall' '_bsdinstall'
@@ -468,6 +470,7 @@ _comps=(
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
+'fd' '_fd'
 'feh' '_feh'
 'fetch' '_fetch'
 'fetchmail' '_fetchmail'
@@ -635,6 +638,7 @@ _comps=(
 'gradle' '_gradle'
 'gradlew' '_gradle'
 'grail' '_webbrowser'
+'grc' '_grc'
 'greadlink' '_readlink'
 'grep' '_grep'
 'grep-excuses' '_grep-excuses'
@@ -736,6 +740,7 @@ _comps=(
 'hostname' '_hostname'
 'hotjava' '_webbrowser'
 'htop' '_htop'
+'hugo' '_hugo'
 'hwinfo' '_hwinfo'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
@@ -925,6 +930,7 @@ _comps=(
 'mere' '_mere'
 'merge' '_rcs'
 'mergechanges' '_mergechanges'
+'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -1020,6 +1026,7 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
+'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -1066,6 +1073,7 @@ _comps=(
 'packf' '_mh'
 'pandoc' '_pandoc'
 'parsehdlist' '_urpmi'
+'pass' '_pass'
 'passwd' '_users'
 'paste' '_paste'
 'patch' '_patch'
@@ -1245,6 +1253,7 @@ _comps=(
 'reprepro' '_reprepro'
 'restart' '_initctl'
 'retawq' '_webbrowser'
+'rg' '_rg'
 'rgrep' '_grep'
 'rgview' '_vim'
 'rgvim' '_vim'
@@ -1314,6 +1323,7 @@ _comps=(
 'seq' '_seq'
 'serialver' '_java'
 'service' '_service'
+'services'\''' '_brew_services'
 'set' '_set'
 'setfacl' '_setfacl'
 'setfacl.exe' '_setfacl'
@@ -1587,6 +1597,7 @@ _comps=(
 'watch' '_watch'
 'watcher' '_openstack'
 'wc' '_wc'
+'wezterm' '_wezterm'
 'wget' '_wget'
 'what' '_sccs'
 'whatis' '_man'
@@ -1838,7 +1849,9 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _SUSEconfig __arguments _a2ps _a2utils _aap \
+autoload -Uz _brew _brew_services _fd _grc _hugo \
+            _meson _ninja _pass _rg _wezterm \
+            _SUSEconfig __arguments _a2ps _a2utils _aap \
             _abcde _absolute_command_paths _ack _acpi _acpitool \
             _acroread _adb _add-zle-hook-widget _add-zsh-hook _alias \
             _aliases _all_labels _all_matches _alsa-utils _alternative \

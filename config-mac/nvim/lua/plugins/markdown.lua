@@ -1,7 +1,7 @@
 return {
     {
         'MeanderingProgrammer/render-markdown.nvim',
-        enabled = false,
+        enabled = true,
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
         opts = {
             file_types = { "markdown" },
@@ -9,7 +9,7 @@ return {
     },
     {
         "iamcco/markdown-preview.nvim",
-        enabled = false,
+        enabled = true,
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         build = "cd app && yarn install",
         init = function()
