@@ -4,7 +4,7 @@ return {
         enabled = true,
         dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
         opts = {
-            file_types = { "markdown" },
+            file_types = { "markdown", },
         },
     },
     {
@@ -15,6 +15,6 @@ return {
         init = function()
             vim.g.mkdp_filetypes = { "markdown", "rmd" }
         end,
-        ft = { "markdown", "rmd" },
+        ft = { "markdown", },
     }
 }

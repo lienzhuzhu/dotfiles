@@ -16,3 +16,9 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.formatoptions = "" -- Remove all formatting options
     end,
 })
+
+vim.filetype.add({
+    extension = {
+        Rmd = "markdown",
+    },
+})
