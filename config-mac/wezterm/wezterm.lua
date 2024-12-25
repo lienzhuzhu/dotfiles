@@ -12,12 +12,11 @@ config.audible_bell = "Disabled"
 --
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
-config.window_background_opacity = 0.08
-config.macos_window_background_blur = 0
+config.window_background_opacity = 0.90
+config.macos_window_background_blur = 36
 config.initial_cols = 170
 config.initial_rows = 48
 config.window_close_confirmation = "NeverPrompt"
-config.window_background_image = "/Users/lienzhu/dotfiles/config-mac/wezterm/chitown.jpeg"
 
 
 -- Keymap settings
