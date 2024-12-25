@@ -10,10 +10,10 @@ config.audible_bell = "Disabled"
 
 -- Window settings
 --
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.enable_tab_bar = false
-config.window_background_opacity = 0.90
-config.macos_window_background_blur = 36
+config.window_background_opacity = 1.0
+--config.macos_window_background_blur = 36
 config.initial_cols = 170
 config.initial_rows = 48
 config.window_close_confirmation = "NeverPrompt"
@@ -58,17 +58,15 @@ config.keys = {
 
 -- Color schemes and visual settings
 --
-config.color_scheme = "mykanagawa"
-config.colors = {
-}
+config.color_scheme = "OneHalfDark"
 
 
 -- Font settings
 --
-config.font_size = 18.0
+config.font_size = 21.0
 --config.font = wezterm.font("SauceCodePro Nerd Font")
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+--config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 
 
 -- Command Palette

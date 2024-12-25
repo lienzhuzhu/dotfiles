@@ -15,7 +15,8 @@ vim.opt.smartindent = true
 
 vim.opt.virtualedit = "block"
 
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
