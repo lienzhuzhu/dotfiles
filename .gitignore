@@ -6,9 +6,8 @@
 *$py.class
 
 config-mac/tmux/plugins/*
-
 config-mac/zsh/plugins/
 config-mac/zsh/.zcompdump
 config-mac/zsh/.zsh_history
-
-.config/wezterm/inspo/
+config-mac/wezterm/inspo/
+config-mac/gtk-2.0/
