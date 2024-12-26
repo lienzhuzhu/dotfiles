@@ -21,7 +21,7 @@ return {
 
         local mason_lspconfig = require("mason-lspconfig")
 
-        local lspconfig = require("lspconfig")                              -- NOTE: used in mason_lspconfig.setup_handlers()
+        local lspconfig = require("lspconfig") -- NOTE: used in mason_lspconfig.setup_handlers()
 
         local on_attach = function(_, bufnr)
             local opts = { noremap = true, silent = true }
