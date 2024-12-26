@@ -6,9 +6,9 @@ return {
         return {
             options = {
                 icons_enabled = true,
-                theme = "auto",
+                theme = "seoul256" ,
                 disabled_filetypes = {
-                    statusline = { "NvimTree" }
+                    statusline = { }
                 }
             },
             sections = {
