@@ -26,4 +26,4 @@ check_unstaged_changes() {
 zstyle ':vcs_info:*' enable git
 
 setopt PROMPT_SUBST
-PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{red}%~%f${vcs_info_msg_0_} %B%F{yellow}>%f%b '
+PROMPT=$'%B%F{red}YT:AcademicCrashout%f%b in %F{blue}%~%f${vcs_info_msg_0_} %B%F{yellow}>%f%b '
