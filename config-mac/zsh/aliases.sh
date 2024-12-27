@@ -43,3 +43,8 @@ bd() {
 init() {
     git add -A && git commit -m "init"
 }
+
+# dotfiles
+dots() {
+    cd ~/dotfiles/config-mac/
+}
