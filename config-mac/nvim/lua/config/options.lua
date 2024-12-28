@@ -43,5 +43,3 @@ vim.opt.shortmess:append("F")
 vim.opt.shortmess:append("I")
 
 vim.opt.splitright = true
-
-vim.opt.mouse = ""
