@@ -1,6 +1,6 @@
-local ls = require("luasnip")
-local s = ls.snippet
-local t = ls.text_node
+-- luasnippets/markdown.lua
+-- Description: Snippets exclusive for Markdown and R Markdown files.
+
 
 return {
 	s("hw", t("hello world of luasnip")),
