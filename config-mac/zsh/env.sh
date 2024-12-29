@@ -11,3 +11,4 @@ export YARN_CACHE_FOLDER="${XDG_CACHE_HOME}/yarn"
 export npm_config_cache="${XDG_CACHE_HOME}/npm"
 
 export GOPATH="${HOME}/armory/go"
+export YAZI_CONFIG_HOME="${XDG_CONFIG_HOME}/yazi"
