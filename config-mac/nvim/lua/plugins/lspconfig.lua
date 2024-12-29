@@ -67,16 +67,32 @@ return {
             keymap.set("n", "K", vim.lsp.buf.hover, opts)
         end
 
+
+        -- HACK:
+        -- Function to dynamically fetch LuaSnip globals
+        local function get_luasnip_globals()
+             return {
+                "s", "t", "i", "f", "c", "d", "r", "sn", "isn",
+                "events", "ai", "extras", "l", "rep", "p", "m", "n",
+                "dl", "fmt", "fmta", "conds", "postfix", "types", "parse", "ms"
+            }
+        end
+
+        -- Dynamically fetch LuaSnip globals
+        local luasnip_globals = get_luasnip_globals()
+        local luasnip_path = vim.fn.stdpath("data") .. "/lazy/LuaSnip" -- Adjust the path based on your plugin manager
+
         local servers = {
             lua_ls = {
                 Lua = {
                     diagnostics = {
-                        globals = { "vim" }
+                        globals = vim.tbl_extend("force", { "vim" }, luasnip_globals)
                     },
                     workspace = {
                         library = {
                             [vim.fn.expand("$VIMRUNTIME/lua")] = true,
                             [vim.fn.stdpath("config") .. "/lua"] = true,
+                            [luasnip_path .. "/lua"] = true, -- Add LuaSnip source files to the workspace
                         }
                     }
                 }

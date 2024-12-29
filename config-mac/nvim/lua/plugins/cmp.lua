@@ -17,9 +17,9 @@ return {
             enable_autosnippets = true, -- Enable auto-snippets globally
         })
         require("luasnip.loaders.from_vscode").lazy_load()
-
         require("luasnip.loaders.from_lua").load({
-            --paths = (os.getenv("XDG_CONFIG_HOME") or "~/.config/") .. "/nvim/luasnippets" -- NOTE: Default path, so not necessary to specify path
+            -- NOTE: Default path, so not necessary to specify path
+            --paths = (os.getenv("XDG_CONFIG_HOME") or "~/.config/") .. "/nvim/luasnippets"
         })
 
         cmp.setup({
@@ -36,14 +36,41 @@ return {
                 documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
+                ["<C-p>"] = cmp.mapping(function(fallback)
+                    if luasnip.choice_active() then
+                        -- Cycle backward through choice node options
+                        luasnip.change_choice(-1)
+                    elseif cmp.visible() then
+                        cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
+
+                ["<C-n>"] = cmp.mapping(function(fallback)
+                    if luasnip.choice_active() then
+                        -- Cycle forward through choice node options
+                        luasnip.change_choice(1)
+                    elseif cmp.visible() then
+                        cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
+
+                --[[
                 ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
                 ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+                --]]
+
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-e>"] = cmp.mapping.abort(), -- NOTE: very useful.
 
-                --["<C-Space>"] = cmp.config.disable, -- NOTE: cmp.mapping.complete() opens the completion menu if it's not already open, useless and collides with tmux prefix.
-                ["<CR>"] = cmp.mapping.confirm(),
+                -- NOTE: cmp.mapping.complete() opens the completion menu if it's not already open, useless and collides with tmux prefix.
+                --["<C-Space>"] = cmp.config.disable,
+
+                ["<C-y>"] = cmp.mapping.confirm(),
 
                 ["<Tab>"] = cmp.mapping(
                     function(fallback)
