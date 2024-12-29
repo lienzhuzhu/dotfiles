@@ -9,12 +9,12 @@
 #+---------------------+#
 # Source External Files #
 #+---------------------+#
-source "$ZDOTDIR/env.sh"
-source "$ZDOTDIR/aliases.sh"
+source "${ZDOTDIR}/env.sh"
+source "${ZDOTDIR}/aliases.sh"
+source "${ZDOTDIR}/functions.sh"
 
 #+-- Prompt --+#
-source "$ZDOTDIR/prompt.sh"
-#source "$ZDOTDIR/pure.sh"
+source "${ZDOTDIR}/prompt.sh"
 
 
 #+-----------------------+#
