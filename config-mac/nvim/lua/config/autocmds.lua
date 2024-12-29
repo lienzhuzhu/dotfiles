@@ -4,7 +4,7 @@
 
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "rmd" },
+    pattern = { "markdown", "rmd" }, --TODO: Need to revisit this syntax. R2PDF seems to use '*.Rmd'
     callback = function()
         -- Clear custom indentation and formatting expressions
         vim.opt_local.indentexpr = ""
@@ -17,6 +17,9 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+--HACK: Will need to find a better solution.
+--      Ideally retain the .Rmd file extension
+--      but inherit markdown syntax.
 vim.filetype.add({
     extension = {
         Rmd = "markdown",
