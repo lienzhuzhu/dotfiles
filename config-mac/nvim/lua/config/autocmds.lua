@@ -4,7 +4,7 @@
 
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "rmd" }, --TODO: Need to revisit this syntax. R2PDF seems to use '*.Rmd'
+    pattern = { "markdown", "rmd" }, --TODO: Need to revisit this syntax. I think it might have to be *.Rmd.
     callback = function()
         -- Clear custom indentation and formatting expressions
         vim.opt_local.indentexpr = ""
