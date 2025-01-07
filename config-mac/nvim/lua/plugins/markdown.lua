@@ -11,13 +11,16 @@ return {
         },
     },
     {
-        "iamcco/markdown-preview.nvim",
+        "lienzhuzhu/r2pdf.nvim",
         enabled = true,
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
+        dev = true,
+        init = function ()
+            local opts = { noremap = true, silent = true }
+            vim.keymap.set("n", "<leader>rp", "<cmd>R2PDF render<CR>", opts)
         end,
-        ft = { "markdown", },
+        opts = function ()
+            return {}
+        end
+
     }
 }
