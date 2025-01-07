@@ -7,7 +7,7 @@ autoload -Uz vcs_info
 precmd() {
     check_unstaged_changes
     # Dynamically update the vcs_info format to include the unstaged icon
-    zstyle ':vcs_info:git:*' formats " on %B%F{red}%b%f${GIT_UNSTAGED_ICON}"
+    zstyle ':vcs_info:git:*' formats " on %B%F{blue}%b%f${GIT_UNSTAGED_ICON}"
     vcs_info
 }
 
@@ -26,4 +26,4 @@ check_unstaged_changes() {
 zstyle ':vcs_info:*' enable git
 
 setopt PROMPT_SUBST
-PROMPT=$'%F{blue}%~%f${vcs_info_msg_0_} %B%F{yellow}>%f%b '
+PROMPT=$'%F{red}%~%f${vcs_info_msg_0_} %B%F{yellow}>%f%b '
