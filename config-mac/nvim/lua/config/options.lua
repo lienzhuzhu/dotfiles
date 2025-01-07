@@ -32,6 +32,7 @@ vim.opt.showmode = false
 vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
+vim.opt.cursorline = true
 
 vim.opt.swapfile = false
 
