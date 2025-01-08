@@ -24,6 +24,7 @@ autoload -U compinit; compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)   # Include hidden files.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 
 #+--------+#
