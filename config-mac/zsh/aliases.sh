@@ -28,7 +28,7 @@ ga() {
 
 # git diff
 gd() {
-    git diff
+    git diff "$@"
 }
 
 # better ls
