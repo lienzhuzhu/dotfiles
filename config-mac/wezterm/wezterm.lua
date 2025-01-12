@@ -17,6 +17,12 @@ config.window_background_opacity = 1.0
 config.initial_cols = 170
 config.initial_rows = 48
 config.window_close_confirmation = "NeverPrompt"
+config.window_padding = {
+    left = 2,
+    right = 2,
+    top = 0,
+    bottom = 0
+}
 
 
 -- Keymap settings
