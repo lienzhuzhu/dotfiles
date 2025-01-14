@@ -12,6 +12,10 @@ vim.keymap.set("n", "<C-x>", "<cmd>bd!<CR>", opts)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
+-- Keep selection active after indenting in visual mode
+vim.api.nvim_set_keymap("v", ">", ">gv", opts)
+vim.api.nvim_set_keymap("v", "<", "<gv", opts)
+
 -- greatest remap ever
 vim.keymap.set("x", "p", [["_dP]])
 
