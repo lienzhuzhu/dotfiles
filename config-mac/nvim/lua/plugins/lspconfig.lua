@@ -15,10 +15,9 @@ return {
         },
 
         "williamboman/mason-lspconfig.nvim",
-        "hrsh7th/cmp-nvim-lsp"
+        "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-
         local mason_lspconfig = require("mason-lspconfig")
 
         local lspconfig = require("lspconfig") -- NOTE: used in mason_lspconfig.setup_handlers()
@@ -31,25 +30,25 @@ return {
 
             -- set keybinds
             opts.desc = "Show LSP references"
-            keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+            keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
             opts.desc = "Go to declaration"
             keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
             opts.desc = "Show LSP definitions"
-            keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+            keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
             opts.desc = "Show LSP implementations"
-            keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+            keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 
             opts.desc = "Show LSP type definitions"
-            keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+            keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
 
             opts.desc = "See available code actions"
             keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
             opts.desc = "Smart rename"
-            keymap.set("n", "gr", vim.lsp.buf.rename, opts)
+            keymap.set("n", "gR", vim.lsp.buf.rename, opts)
 
             opts.desc = "Show buffer diagnostics"
             keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
@@ -65,13 +64,16 @@ return {
 
             opts.desc = "Show documentation for what is under cursor"
             keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+            opts.desc = "Show function signature help"
+            keymap.set("n", "<leader>s", vim.lsp.buf.signature_help, opts)
         end
 
 
         -- HACK:
         -- Function to dynamically fetch LuaSnip globals
         local function get_luasnip_globals()
-             return {
+            return {
                 "s", "t", "i", "f", "c", "d", "r", "sn", "isn",
                 "events", "ai", "extras", "l", "rep", "p", "m", "n",
                 "dl", "fmt", "fmta", "conds", "postfix", "types", "parse", "ms"
@@ -117,17 +119,17 @@ return {
             end,
         }
 
-        local signs = {
-            Error = "",
-            Warn = "",
-            Hint = "",
-            Info = ""
-        }
 
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-        end
+        vim.diagnostic.config({
+            signs = {
+                text = {
+                    [vim.diagnostic.severity.ERROR] = '✘',
+                    [vim.diagnostic.severity.WARN] = '▲',
+                    [vim.diagnostic.severity.HINT] = '⚑',
+                    [vim.diagnostic.severity.INFO] = '»',
+                },
+            },
+        })
 
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
             border = "rounded",
