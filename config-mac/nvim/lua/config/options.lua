@@ -29,10 +29,12 @@ vim.opt.laststatus = require("utils.enums").InfoLines.GLOBAL
 vim.opt.showtabline = require("utils.enums").InfoLines.NEVER
 vim.opt.showmode = false
 
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
 
 vim.opt.swapfile = false
 

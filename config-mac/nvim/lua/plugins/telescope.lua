@@ -3,6 +3,10 @@ return {
         "nvim-telescope/telescope-ui-select.nvim",
     },
     {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make'
+    },
+    {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5', -- NOTE: from telescope documentation it is not recommended to use latest master
         dependencies = { 'nvim-lua/plenary.nvim' },
@@ -16,6 +20,7 @@ return {
             vim.keymap.set("n", "<leader>pg", builtin.grep_string, {})
 
             require("telescope").load_extension("ui-select")
+            require("telescope").load_extension("fzf")
 
             local themes = require("telescope.themes")
             return {
