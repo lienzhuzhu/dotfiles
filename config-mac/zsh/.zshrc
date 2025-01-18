@@ -20,6 +20,7 @@ source "${ZDOTDIR}/prompt.sh"
 #+-----------------------+#
 # Basic Auto/tab Complete #
 #+-----------------------+#
+fpath=("${ZDOTDIR}/completions" $fpath)
 autoload -U compinit; compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
