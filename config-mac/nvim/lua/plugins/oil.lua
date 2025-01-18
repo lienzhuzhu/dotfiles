@@ -16,7 +16,13 @@ return {
                         vim.endswith(name, ".synctex.gz") or
                         vim.endswith(name, ".toc") or
                         vim.endswith(name, ".fdb_latexmk") or
-                        vim.endswith(name, ".git")
+                        vim.endswith(name, ".git") or
+                        vim.endswith(name, ".log") or
+                        vim.endswith(name, ".bbl") or
+                        vim.endswith(name, ".bcf") or
+                        vim.endswith(name, ".log") or
+                        vim.endswith(name, ".blg") or
+                        vim.endswith(name, ".xml")
                 end,
             }
         }
