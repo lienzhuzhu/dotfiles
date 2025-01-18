@@ -25,7 +25,7 @@ return {
             local themes = require("telescope.themes")
             return {
                 defaults = {
-                    layout_strategy = "center",
+                    layout_strategy = "flex",
                 },
                 extensions = {
                     ['ui-select'] = {

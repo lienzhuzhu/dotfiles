@@ -17,6 +17,17 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown", -- Trigger only for markdown files
+    callback = function()
+        -- Set the key mappings for visual line navigation
+        vim.keymap.set('n', 'j', 'gj', { buffer = true, noremap = true })
+        vim.keymap.set('n', 'k', 'gk', { buffer = true, noremap = true })
+        vim.keymap.set('v', 'j', 'gj', { buffer = true, noremap = true })
+        vim.keymap.set('v', 'k', 'gk', { buffer = true, noremap = true })
+    end,
+})
+
 --HACK: Will need to find a better solution.
 --      Ideally retain the .Rmd file extension
 --      but inherit markdown syntax.
