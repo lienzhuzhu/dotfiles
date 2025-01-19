@@ -13,7 +13,6 @@ gc() {
         return 1
     fi
     git commit -am "$@"
-    git push
 }
 
 # git add -A && git commit -m "<commit message>; git push"
@@ -23,6 +22,9 @@ ga() {
         return 1
     fi
     git add -A && git commit -m "$@"
+}
+
+gp() {
     git push
 }
 
@@ -39,12 +41,12 @@ bd() {
     cd ~/armory/braindump/
 }
 
-# Initial commit
-init() {
-    git add -A && git commit -m "init"
-}
-
-# dotfiles
+# cd into dotfiles
 dots() {
     cd ~/dotfiles/config-mac/
+}
+
+# cd into blog
+blog() {
+    cd ~/armory/web/lienzhuzhu.github.io/
 }
