@@ -14,6 +14,14 @@ gc() {
     fi
     git commit -am "$@"
 }
+gcp() {
+    if [ $# -eq 0 ]; then
+        echo "Error: Commit message is required."
+        return 1
+    fi
+    git commit -am "$@"
+    git push
+}
 
 # git add -A && git commit -m "<commit message>; git push"
 ga() {
@@ -22,6 +30,14 @@ ga() {
         return 1
     fi
     git add -A && git commit -m "$@"
+}
+gap() {
+    if [ $# -eq 0 ]; then
+        echo "Error: Commit message is required."
+        return 1
+    fi
+    git add -A && git commit -m "$@"
+    git push
 }
 
 gp() {
