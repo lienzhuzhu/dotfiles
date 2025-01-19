@@ -1,5 +1,6 @@
 alias vim='nvim'
 alias python='python3'
+alias cat='bat'
 
 # git status
 s() {
