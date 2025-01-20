@@ -65,5 +65,5 @@ dots() {
 
 # cd into blog
 blog() {
-    cd ~/armory/web/lienzhuzhu.github.io/
+    cd ~/armory/blog
 }
