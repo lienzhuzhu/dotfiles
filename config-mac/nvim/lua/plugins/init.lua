@@ -1,7 +1,1 @@
-return {
-    {
-        "numToStr/Comment.nvim",
-        opts = {
-        }
-    },
-}
+return {}
