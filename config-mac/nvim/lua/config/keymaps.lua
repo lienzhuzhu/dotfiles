@@ -27,3 +27,14 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+-- Change directory
+vim.keymap.set('n', '`', function()
+    local parent_dir = vim.fn.expand('%:h')
+    if parent_dir ~= '' then
+        vim.cmd('cd ' .. parent_dir)
+        print('Changed directory to: ' .. parent_dir)
+    else
+        print('No file path found')
+    end
+end, { noremap = true, silent = true, desc = "Change working directory to parent of current file" })

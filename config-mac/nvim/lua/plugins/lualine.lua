@@ -4,6 +4,9 @@ return {
     opts = function ()
         local ls = require("lazy.status")
         return {
+            extensions = {
+                "oil",
+            },
             options = {
                 icons_enabled = true,
                 theme = "seoul256" ,
@@ -12,6 +15,14 @@ return {
                 }
             },
             sections = {
+                lualine_a = {'mode'},
+                lualine_b = {'branch', 'diff', 'diagnostics'},
+                lualine_c = {
+                    {
+                        "filename",
+                        path=1,
+                    },
+                },
                 lualine_x = {
                     {
                         ls.updates,
