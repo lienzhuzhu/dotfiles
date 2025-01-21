@@ -11,3 +11,5 @@ export YARN_CACHE_FOLDER="${XDG_CACHE_HOME}/yarn"
 export npm_config_cache="${XDG_CACHE_HOME}/npm"
 
 export YAZI_CONFIG_HOME="${XDG_CONFIG_HOME}/yazi"
+
+export PATH="$HOME/.local/bin:$PATH"
