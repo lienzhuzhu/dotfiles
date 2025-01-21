@@ -19,8 +19,8 @@ return {
         }
 
         section.buttons.val = {
-            button("f", "  Find file",
-            ":Telescope find_files hidden=true no_ignore=true<CR>"),
+            -- button("f", "  Find file",
+            -- ":Telescope find_files hidden=true no_ignore=true<CR>"),
             button("e", "  New file", ":ene <BAR> startinsert <CR>"),
             button("c", "  Configuration",
             ":e ~/.config/nvim/init.lua <CR>"),

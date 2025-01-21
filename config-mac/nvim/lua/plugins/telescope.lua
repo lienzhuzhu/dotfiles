@@ -1,39 +1,39 @@
 return {
-    {
-        "nvim-telescope/telescope-ui-select.nvim",
+    'nvim-telescope/telescope.nvim',
+    enabled = true,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        {
+            "nvim-telescope/telescope-ui-select.nvim",
+        },
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'make'
+        },
     },
-    {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make'
-    },
-    {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.5', -- NOTE: from telescope documentation it is not recommended to use latest master
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = function ()
+    opts = function ()
 
-            local builtin = require("telescope.builtin")
+        local builtin = require("telescope.builtin")
 
-            vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-            vim.keymap.set("n", "<leader>pr", builtin.git_files, {})
-            vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
-            vim.keymap.set("n", "<leader>pg", builtin.grep_string, {})
+        vim.keymap.set("n", "<leader>pf", builtin.find_files, {}) -- NOTE: aka fzf
+        vim.keymap.set("n", "<leader>pr", builtin.git_files, {})
+        vim.keymap.set("n", "<leader>pg", builtin.live_grep, {}) -- NOTE: ripgrep
+        vim.keymap.set("n", "<leader>ps", builtin.grep_string, {}) -- NOTE: ripgrep incremental
 
-            require("telescope").load_extension("ui-select")
-            require("telescope").load_extension("fzf")
+        require("telescope").load_extension("ui-select")
+        require("telescope").load_extension("fzf")
 
-            local themes = require("telescope.themes")
-            return {
-                defaults = {
-                    layout_strategy = "flex",
-                },
-                extensions = {
-                    ['ui-select'] = {
-                        themes.get_dropdown {
-                        }
+        local themes = require("telescope.themes")
+        return {
+            defaults = {
+                layout_strategy = "flex",
+            },
+            extensions = {
+                ['ui-select'] = {
+                    themes.get_dropdown {
                     }
                 }
             }
-        end,
-    }
+        }
+    end,
 }

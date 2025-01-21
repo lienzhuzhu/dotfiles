@@ -1,6 +1,7 @@
 alias vim='nvim'
 alias python='python3'
 alias cat='bat'
+alias soz="source ${ZDOTDIR}/.zshrc"
 
 # git status
 s() {
