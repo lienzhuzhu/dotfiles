@@ -34,6 +34,10 @@ vim.keymap.set("n", "<leader>cc", "<cmd>cclose<CR>", opts)
 vim.keymap.set("n", "<leader>cn", "<cmd>cnext<CR>", opts)
 vim.keymap.set("n", "<leader>cp", "<cmd>cprev<CR>", opts)
 
+
+-- Fuzzy find files
+vim.keymap.set("n", "<leader>f", "<CMD>FzfLua files<CR>", opts)
+
 -- Change directory
 vim.keymap.set('n', '`', function()
     local parent_dir = vim.fn.expand('%:h')
@@ -43,7 +47,7 @@ vim.keymap.set('n', '`', function()
     else
         print('No file path found')
     end
-end, { noremap = true, silent = true, desc = "Change working directory to parent of current file" })
+end, opts)
 
 
 -- TODO: Experiment with this.
@@ -65,7 +69,7 @@ end, { noremap = true, silent = true, desc = "Change working directory to parent
 --         vim.cmd(string.format("cexpr system('%s')", cmd))
 --         vim.cmd('copen')
 --     end
--- end, { noremap = true, silent = true })
+-- end, opts)
 
 -- Notaker grep using ripgrep
 vim.keymap.set('n', '<leader>ng', function()
@@ -75,7 +79,7 @@ vim.keymap.set('n', '<leader>ng', function()
         vim.cmd(cmd)
         vim.cmd('copen')  -- Open the quickfix window
     end
-end, { noremap = true, silent = true })
+end, opts)
 
 -- Grep in current working directory with short PWD in prompt using ripgrep
 vim.keymap.set('n', 're', function()
@@ -87,7 +91,7 @@ vim.keymap.set('n', 're', function()
         vim.cmd(cmd)
         vim.cmd('copen')  -- Open the quickfix window
     end
-end, { noremap = true, silent = true })
+end, opts)
 
 -- TODO: Experiment with this one
 --
@@ -103,4 +107,4 @@ end, { noremap = true, silent = true })
 --         vim.cmd(string.format("cexpr system('%s')", cmd))
 --         vim.cmd('copen')
 --     end
--- end, { noremap = true, silent = true })
+-- end, opts)
