@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
 
 vim.keymap.set("n", "<C-x>", "<cmd>bd!<CR>", opts)
 
--- for some reason these must use the ':' character and not <cmd>
+-- These must use ':' instead of "<cmd>" because it uses the "move" Ex command
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
