@@ -39,12 +39,12 @@ vim.keymap.set('n', '`', function()
     end
 end, { noremap = true, silent = true, desc = "Change working directory to parent of current file" })
 
--- Set up a keymap to search within the NOTAKER_CORTEX_DIR for all .md files
+-- Notaker grep
 vim.keymap.set('n', '<leader>[', function()
-  local search_term = vim.fn.input("Search: ")
-  if search_term ~= "" then
-    local cmd = string.format('vimgrep /%s/g $NOTAKER_CORTEX_DIR/**/*.md', search_term)
-    vim.cmd(cmd)
-    vim.cmd('copen')  -- Open the quickfix window to display results
-  end
+    local search_term = vim.fn.input("NOTAKER grep")
+    if search_term ~= "" then
+        local cmd = string.format('vimgrep /%s/g $NOTAKER_CORTEX_DIR/**/*.md', search_term)
+        vim.cmd(cmd)
+        vim.cmd('copen')
+    end
 end, { noremap = true, silent = true })
