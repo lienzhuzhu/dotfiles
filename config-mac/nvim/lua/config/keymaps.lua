@@ -86,6 +86,8 @@ vim.keymap.set('v', '<leader>vg', function()
 end, opts)
 
 
+-- TODO: Bundle into a plugin
+--
 -- grep in NOTAKER_CORTEX_DIR
 vim.keymap.set('n', '<leader>ng', function()
     local search_term = vim.fn.input("Ngrep: ")
