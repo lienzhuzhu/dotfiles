@@ -17,8 +17,16 @@ vim.api.nvim_set_keymap("v", ">", ">gv", opts)
 vim.api.nvim_set_keymap("v", "<", "<gv", opts)
 
 -- greatest remap ever
-vim.keymap.set("x", "p", [["_dP]])
+vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- yank to system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- delete to void register
+vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
+
+-- Terminal stuff
 vim.keymap.set("n", "<C-t>", "<cmd>terminal<CR>", opts)
 vim.keymap.set('t', "<Esc>", [[<C-\><C-n>]], opts)
 

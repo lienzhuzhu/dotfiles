@@ -47,7 +47,7 @@ return {
             opts.desc = "See available code actions"
             keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
-            opts.desc = "Smart rename"
+            opts.desc = "Rename symbol"
             keymap.set("n", "gR", vim.lsp.buf.rename, opts)
 
             -- opts.desc = "Show buffer diagnostics"

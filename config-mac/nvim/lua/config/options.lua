@@ -37,8 +37,7 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 
 vim.opt.swapfile = false
-
-vim.opt.clipboard = "unnamedplus"
+vim.opt.backup = false
 
 vim.opt.shortmess:append("c")
 vim.opt.shortmess:append("a")
