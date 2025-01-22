@@ -28,7 +28,6 @@ return {
 
             opts.buffer = bufnr
 
-            -- set keybinds
             opts.desc = "Show LSP references"
             keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
@@ -50,11 +49,13 @@ return {
             opts.desc = "Rename symbol"
             keymap.set("n", "gR", vim.lsp.buf.rename, opts)
 
-            -- opts.desc = "Show buffer diagnostics"
-            -- keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
+            opts.desc = "Show buffer diagnostics"
+            keymap.set("n", "<leader>bd", function()
+                vim.diagnostic.setqflist({ open = true })
+            end, opts)
 
             opts.desc = "Show line diagnostics"
-            keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+            keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
 
             opts.desc = "Go to previous diagnostic"
             keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
@@ -66,7 +67,7 @@ return {
             keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
             opts.desc = "Show function signature help"
-            keymap.set("n", "<leader>s", vim.lsp.buf.signature_help, opts)
+            keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help, opts)
         end
 
 
