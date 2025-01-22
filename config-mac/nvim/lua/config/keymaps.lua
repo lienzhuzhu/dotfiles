@@ -31,12 +31,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 -- Quickfix List
 vim.keymap.set("n", "<leader>co", "<cmd>copen<CR>", opts)
 vim.keymap.set("n", "<leader>cc", "<cmd>cclose<CR>", opts)
-vim.keymap.set("n", "<leader>cn", "<cmd>cnext<CR>", opts)
-vim.keymap.set("n", "<leader>cp", "<cmd>cprev<CR>", opts)
-
-
--- Fuzzy find files
-vim.keymap.set("n", "<leader>f", "<CMD>FzfLua files<CR>", opts)
+vim.keymap.set("n", "<C-n>", "<cmd>cnext<CR>", opts)
+vim.keymap.set("n", "<C-p>", "<cmd>cprev<CR>", opts)
 
 -- Change directory
 vim.keymap.set('n', '`', function()
@@ -50,61 +46,27 @@ vim.keymap.set('n', '`', function()
 end, opts)
 
 
--- TODO: Experiment with this.
---
--- Notaker fuzzy grep using ripgrep and fzf
--- vim.keymap.set('n', '<leader>ng', function()
---     local notaker_dir = os.getenv("NOTAKER_CORTEX_DIR")
---     if not notaker_dir or notaker_dir == "" then
---         vim.notify("NOTAKER_CORTEX_DIR is not set!", vim.log.levels.ERROR)
---         return
---     end
---
---     local search_term = vim.fn.input("Fuzzy GREP in NOTAKER: ")
---     if search_term ~= "" then
---         local cmd = string.format(
---             'rg --hidden --glob "!*.a" --line-number --column --no-heading "%s" "%s" | fzf',
---             search_term, notaker_dir
---         )
---         vim.cmd(string.format("cexpr system('%s')", cmd))
---         vim.cmd('copen')
---     end
--- end, opts)
+-- Open fzf-lua file picker
+vim.keymap.set("n", "<leader>pf", "<CMD>FzfLua files<CR>", opts)
 
--- Notaker grep using ripgrep
-vim.keymap.set('n', '<leader>ng', function()
-    local search_term = vim.fn.input("NOTAKER grep: ")
-    if search_term ~= "" then
-        local cmd = string.format('silent grep! -r --vimgrep --hidden --glob "!*.a" "%s" $NOTAKER_CORTEX_DIR/**/*.md', search_term)
-        vim.cmd(cmd)
-        vim.cmd('copen')  -- Open the quickfix window
-    end
-end, opts)
-
--- Grep in current working directory with short PWD in prompt using ripgrep
+-- grep in current working directory with short PWD in prompt
 vim.keymap.set('n', 're', function()
     local cwd = vim.fn.getcwd()  -- Get the current working directory
     local short_cwd = vim.fn.fnamemodify(cwd, ":~")  -- Shorten the path (e.g., ~/projects/notaker)
-    local search_term = vim.fn.input("GREP in " .. short_cwd .. ": ")
+    local search_term = vim.fn.input("grep in " .. short_cwd .. ": ")
     if search_term ~= "" then
-        local cmd = string.format('silent grep! -r --vimgrep --hidden --glob "!*.a" "%s" %s', search_term, cwd)
+        local cmd = string.format('vimgrep /%s/g %s/**/*', search_term, cwd)
         vim.cmd(cmd)
-        vim.cmd('copen')  -- Open the quickfix window
+        vim.cmd('copen')
     end
 end, opts)
 
--- TODO: Experiment with this one
---
--- vim.keymap.set('n', 're', function()
---     local cwd = vim.fn.getcwd()
---     local short_cwd = vim.fn.fnamemodify(cwd, ":~")
---     local search_term = vim.fn.input("Fuzzy GREP in " .. short_cwd .. ": ")
---     if search_term ~= "" then
---         local cmd = string.format(
---             'rg --hidden --glob "!*.a" --line-number --column --no-heading "%s" %s | fzf',
---             search_term, cwd
---         )
---         vim.cmd(string.format("cexpr system('%s')", cmd))
---         vim.cmd('copen')
---     end
--- end, opts)
+-- grep in NOTAKER_CORTEX_DIR
+vim.keymap.set('n', '<leader>ng', function()
+    local search_term = vim.fn.input("NOTAKER grep: ")
+    if search_term ~= "" then
+        local cmd = string.format('vimgrep /%s/g $NOTAKER_CORTEX_DIR/**/*.md', search_term)
+        vim.cmd(cmd)
+        vim.cmd('copen')
+    end
+end, opts)
