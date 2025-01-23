@@ -25,11 +25,11 @@ return {
     },
     {
         "lienzhuzhu/r2pdf.nvim",
-        enabled = false,
+        enabled = true,
         dev = true,
         init = function ()
-            local opts = { noremap = true, silent = true }
-            vim.keymap.set("n", "<leader>rp", "<cmd>R2PDF render<CR>", opts)
+            local opts = { noremap = true, silent = false }
+            vim.keymap.set("n", "<leader>xn", ":Note ", opts)
         end,
         opts = function ()
             return {}
