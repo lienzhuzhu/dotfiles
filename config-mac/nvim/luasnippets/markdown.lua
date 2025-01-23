@@ -22,9 +22,9 @@ return {
         i(0),
     }),
     s("nt", {
-        t("# "), f(filename_no_ext, {}), t({"", ""}),
-        t("> Date: "), i(1, os.date("%Y-%m-%d")), t({"", "", ""}),
-        t("> Instructor: "), i(2), t({"", "", ""}),
+        t("# "), f(filename_no_ext, {}), t({"", "", ""}),
+        t("Date: "), i(1, os.date("%Y-%m-%d")), t({"", "", ""}),
+        t("Instructor: "), i(2), t({"", "", ""}),
         t("## "), i(3), t({"", "", ""}),
         i(0),
     })
