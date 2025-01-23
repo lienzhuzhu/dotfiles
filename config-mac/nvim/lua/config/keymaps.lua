@@ -59,7 +59,7 @@ vim.keymap.set("n", "<leader>pf", "<CMD>FzfLua files<CR>", opts) -- "project fzf
 vim.keymap.set("n", "<leader>pg", "<CMD>FzfLua live_grep<CR>", opts) -- "project grep"
 
 -- grep in current working directory with short PWD in prompt
-vim.keymap.set('n', 're', function()
+vim.keymap.set('n', '<leader>re', function()
     local cwd = vim.fn.getcwd()  -- Get the current working directory
     local short_cwd = vim.fn.fnamemodify(cwd, ":~")  -- Shorten the path (e.g., ~/projects/notaker)
     local search_term = vim.fn.input("grep in " .. short_cwd .. ": ")
