@@ -6,6 +6,7 @@ return {
         vim.keymap.set("n", "<leader>t", "<cmd>Oil<CR>", opts)
 
         return {
+            skip_confirm_for_simple_edits = true,
             view_options = {
                 is_always_hidden = function(name, _)
                     return
