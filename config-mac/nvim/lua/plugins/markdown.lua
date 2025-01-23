@@ -24,16 +24,11 @@ return {
         end
     },
     {
-        "lienzhuzhu/r2pdf.nvim",
+        "lienzhuzhu/notaker.nvim",
         enabled = true,
         dev = true,
-        init = function ()
-            local opts = { noremap = true, silent = false }
-            vim.keymap.set("n", "<leader>xn", ":Note ", opts)
-        end,
-        opts = function ()
-            return {}
-        end
-
+        opts = {
+            default_keymaps = true,
+        },
     }
 }
