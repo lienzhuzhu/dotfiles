@@ -38,10 +38,7 @@ vim.opt.cursorcolumn = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-
-vim.opt.shortmess:append("c")
-vim.opt.shortmess:append("a")
-vim.opt.shortmess:append("F")
-vim.opt.shortmess:append("I")
+vim.opt.hidden = false
 
 vim.opt.splitright = true
+vim.opt.showtabline = 1

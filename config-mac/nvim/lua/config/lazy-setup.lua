@@ -65,7 +65,7 @@ local opts = {
         notify = false
     },
     install = {
-        colorscheme = { "onedark" },
+        colorscheme = { "gruvbox" },
     },
 }
 

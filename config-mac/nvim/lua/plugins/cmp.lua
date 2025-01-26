@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    lazy = false, -- MUST LOAD IN IMMEDIATELY TO PREVENT RACE CONDITION WITH BUFFERLINE
+    lazy = false,
     dependencies = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
@@ -15,7 +15,7 @@ return {
         local cmp = require("cmp")
         local luasnip = require("luasnip")
         luasnip.config.set_config({
-            enable_autosnippets = true, -- Enable auto-snippets globally
+            enable_autosnippets = true,
         })
         require("luasnip.loaders.from_vscode").lazy_load()
         require("luasnip.loaders.from_lua").load({
@@ -39,7 +39,6 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ["<C-p>"] = cmp.mapping(function(fallback)
                     if luasnip.choice_active() then
-                        -- Cycle backward through choice node options
                         luasnip.change_choice(-1)
                     elseif cmp.visible() then
                         cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
@@ -59,11 +58,6 @@ return {
                     end
                 end, { "i", "s" }),
 
-                --[[
-                ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-                ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-                --]]
-
                 ["<C-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(4),
                 ["<C-e>"] = cmp.mapping.abort(), -- NOTE: very useful.
@@ -72,16 +66,12 @@ return {
                 --["<C-Space>"] = cmp.config.disable,
 
                 ["<C-y>"] = cmp.mapping.confirm(),
+                
 
                 ["<Tab>"] = cmp.mapping(
                     function(fallback)
                         if cmp.visible() then
                             cmp.confirm({ select = true })
-                            --if #cmp.get_entries() == 1 then
-                            --    cmp.confirm({ select = true })
-                            --else
-                            --    cmp.select_next_item()
-                            --end
                         elseif luasnip.expandable() then
                             luasnip.expand()
                         elseif luasnip.expand_or_jumpable() then

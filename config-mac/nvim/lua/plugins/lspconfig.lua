@@ -29,33 +29,33 @@ return {
             opts.buffer = bufnr
 
             opts.desc = "Show LSP references"
-            keymap.set("n", "gr", vim.lsp.buf.references, opts)
+            keymap.set("n", "<leader>lr", vim.lsp.buf.references, opts)
 
             opts.desc = "Go to declaration"
-            keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+            keymap.set("n", "<leader>lD", vim.lsp.buf.declaration, opts)
 
             opts.desc = "Show LSP definitions"
-            keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+            keymap.set("n", "<leader>ld", vim.lsp.buf.definition, opts)
 
             opts.desc = "Show LSP implementations"
-            keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+            keymap.set("n", "<leader>li", vim.lsp.buf.implementation, opts)
 
             opts.desc = "Show LSP type definitions"
-            keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+            keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, opts)
 
             opts.desc = "See available code actions"
-            keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+            keymap.set({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action, opts)
 
             opts.desc = "Rename symbol"
-            keymap.set("n", "gR", vim.lsp.buf.rename, opts)
+            keymap.set("n", "<leader>lR", vim.lsp.buf.rename, opts)
 
             opts.desc = "Show buffer diagnostics"
-            keymap.set("n", "<leader>bd", function()
+            keymap.set("n", "<leader>qbd", function()
                 vim.diagnostic.setqflist({ open = true })
             end, opts)
 
             opts.desc = "Show line diagnostics"
-            keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
+            keymap.set("n", "<leader>qld", vim.diagnostic.open_float, opts)
 
             opts.desc = "Go to previous diagnostic"
             keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
@@ -64,7 +64,7 @@ return {
             keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
             opts.desc = "Show documentation for what is under cursor"
-            keymap.set("n", "K", vim.lsp.buf.hover, opts)
+            keymap.set("n", "<leader>K", vim.lsp.buf.hover, opts)
 
             opts.desc = "Show function signature help"
             keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help, opts)
