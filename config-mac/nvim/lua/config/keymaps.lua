@@ -32,6 +32,12 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 
+-- Tab management
+vim.keymap.set("n", "_", "<cmd>tabprev<CR>", opts)
+vim.keymap.set("n", "+", "<cmd>tabnext<CR>", opts)
+vim.keymap.set("n", "<C-x>", "<cmd>tabclose<CR>", opts)
+vim.keymap.set("n", "<C-\\>", "<cmd>tabnew<CR>", opts)
+
 -- Quickfix List
 vim.keymap.set("n", "<leader>co", "<cmd>copen<CR>", opts)
 vim.keymap.set("n", "<leader>cc", "<cmd>cclose<CR>", opts)
