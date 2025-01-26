@@ -64,7 +64,7 @@ return {
             keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
             opts.desc = "Show documentation for what is under cursor"
-            keymap.set("n", "<leader>K", vim.lsp.buf.hover, opts)
+            keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
             opts.desc = "Show function signature help"
             keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help, opts)
