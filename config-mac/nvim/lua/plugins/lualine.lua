@@ -26,6 +26,10 @@ return {
                     {
                         "filename",
                         path=1,
+                        filetype_names = {
+                            fzf = 'FZF',
+                            alpha = 'Alpha'
+                        },
                     },
                 },
                 lualine_x = {
@@ -47,6 +51,10 @@ return {
                     {
                         'tabs', mode = 2,
                         max_length = vim.o.columns,
+                        filetype_names = {
+                            fzf = 'FZF',
+                            alpha = 'Alpha'
+                        },
                     },
                 },
             },
