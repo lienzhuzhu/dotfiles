@@ -10,6 +10,7 @@ config.audible_bell = "Disabled"
 
 -- Window settings
 --
+config.max_fps = 240
 config.window_decorations = "TITLE | RESIZE"
 config.enable_tab_bar = false
 config.window_background_opacity = 1.0
