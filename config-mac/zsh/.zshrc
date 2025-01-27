@@ -20,8 +20,9 @@ source "${ZDOTDIR}/prompt.sh"
 #+-----------------------+#
 # Basic Auto/tab Complete #
 #+-----------------------+#
+fpath+=~/.zfunc;
 fpath=("${ZDOTDIR}/completions" $fpath)
-autoload -U compinit; compinit
+autoload -Uz compinit; compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)   # Include hidden files.
