@@ -55,9 +55,9 @@ gd() {
 # better ls
 alias ls='ls -F'
 
-# cd into braindump
-bd() {
-    cd ~/armory/braindump/
+# cd into NOTAKER_CORTEX_DIR
+nd() {
+    cd $NOTAKER_CORTEX_DIR
 }
 
 # cd into dotfiles
