@@ -82,3 +82,7 @@ vim.keymap.set('v', '<leader>vg', function()
     vim.cmd('vimgrep /' .. selected_text .. '/g **/*')
     vim.cmd('copen')
 end, opts)
+
+vim.keymap.set("n", "<leader>t", ":vsplit | terminal<CR>", opts)
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
+vim.keymap.set({"n", "t"}, "<C-x>", "<cmd>bd!<CR>", opts)
