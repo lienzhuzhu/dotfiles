@@ -31,18 +31,6 @@ return {
             opts.desc = "Show LSP references"
             keymap.set("n", "<leader>lr", vim.lsp.buf.references, opts)
 
-            opts.desc = "Go to declaration"
-            keymap.set("n", "<leader>lD", vim.lsp.buf.declaration, opts)
-
-            opts.desc = "Show LSP definitions"
-            keymap.set("n", "<leader>ld", vim.lsp.buf.definition, opts)
-
-            opts.desc = "Show LSP implementations"
-            keymap.set("n", "<leader>li", vim.lsp.buf.implementation, opts)
-
-            opts.desc = "Show LSP type definitions"
-            keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, opts)
-
             opts.desc = "See available code actions"
             keymap.set({ "n", "v" }, "<leader>lca", vim.lsp.buf.code_action, opts)
 
