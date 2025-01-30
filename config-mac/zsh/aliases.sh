@@ -3,6 +3,7 @@ alias python='python3'
 alias cat='bat'
 alias soz="source ${ZDOTDIR}/.zshrc"
 alias ntf='vim "$(fd .md "${NOTAKER_CORTEX_DIR}" | fzf)"'
+alias grep='egrep'
 
 # git status
 s() {
