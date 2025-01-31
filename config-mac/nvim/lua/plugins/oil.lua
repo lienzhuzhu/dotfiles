@@ -3,7 +3,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = function ()
         local opts = { noremap = true, silent = true }
-        vim.keymap.set("n", "<leader>o", "<cmd>Oil<CR>", opts)
+        vim.keymap.set("n", "<leader>t", "<cmd>Oil<CR>", opts)
 
         return {
             skip_confirm_for_simple_edits = true,
