@@ -44,6 +44,9 @@ vim.opt.splitright = true
 vim.opt.showtabline = 1
 
 vim.g.python_recommended_style = 0
+vim.g.r_recommended_style = 0
+vim.g.c_recommended_style = 0
+vim.g.cpp_recommended_style = 0
 vim.g.markdown_recommended_style = 0
 vim.g.rmd_recommended_style = 0
 vim.g.scss_recommended_style = 0
