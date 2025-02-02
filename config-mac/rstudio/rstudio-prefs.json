@@ -42,5 +42,8 @@
     },
     "editor_theme": "Material",
     "rmd_viewer_type": "pane",
-    "console_line_length_limit": 1080
+    "console_line_length_limit": 1080,
+    "source_with_echo": true,
+    "num_spaces_for_tab": 4,
+    "syntax_color_console": true
 }
