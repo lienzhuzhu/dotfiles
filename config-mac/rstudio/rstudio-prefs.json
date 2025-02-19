@@ -15,8 +15,8 @@
         "quadrants": [
             "Console",
             "TabSet1",
-            "Source",
-            "TabSet2"
+            "TabSet2",
+            "Source"
         ],
         "tabSet1": [
             "Environment",
@@ -40,7 +40,7 @@
         "console_right_on_top": true,
         "additional_source_columns": 0
     },
-    "editor_theme": "Material",
+    "editor_theme": "base16 Gruvbox dark, medium {rsthemes}",
     "rmd_viewer_type": "pane",
     "console_line_length_limit": 1080,
     "source_with_echo": true,
@@ -48,6 +48,15 @@
     "syntax_color_console": true,
     "insert_native_pipe_operator": true,
     "relative_line_numbers": true,
-    "code_completion": "never",
-    "indent_guides": "rainbowlines"
+    "code_completion": "manual",
+    "highlight_selected_line": true,
+    "enable_text_drag": false,
+    "highlight_r_function_calls": true,
+    "rainbow_parentheses": true,
+    "strip_trailing_whitespace": true,
+    "tab_completion": false,
+    "soft_wrap_r_files": true,
+    "scroll_past_end_of_document": true,
+    "vcs_enabled": false,
+    "jobs_tab_visibility": "shown"
 }
