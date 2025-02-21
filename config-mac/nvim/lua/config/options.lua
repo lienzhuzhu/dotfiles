@@ -30,6 +30,7 @@ vim.opt.scrolloff = 8
 vim.opt.laststatus = require("utils.enums").InfoLines.GLOBAL
 vim.opt.showtabline = require("utils.enums").InfoLines.NEVER
 vim.opt.showmode = false
+vim.opt.cmdheight = 0
 
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
