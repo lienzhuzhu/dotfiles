@@ -2,7 +2,7 @@ alias vim='nvim'
 alias python='python3'
 alias cat='bat'
 alias soz="source ${ZDOTDIR}/.zshrc"
-alias ntf='vim "$(fd .md "${NOTAKER_CORTEX_DIR}" | fzf)"'
+alias ntf='vim "$(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")"'
 alias grep='egrep'
 
 # git status
