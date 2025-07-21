@@ -97,15 +97,16 @@ return {
             automatic_installation = true
         })
 
-        mason_lspconfig.setup_handlers {
-            function(server_name)
-                lspconfig[server_name].setup({
-                    capabilities = require("cmp_nvim_lsp").default_capabilities(),
-                    on_attach = on_attach,
-                    settings = servers[server_name],
-                    filetypes = (servers[server_name] or {}).filetypes,
-                })
-            end,
+        mason_lspconfig.setup {
+            handlers = 
+                function(server_name)
+                    lspconfig[server_name].setup({
+                        capabilities = require("cmp_nvim_lsp").default_capabilities(),
+                        on_attach = on_attach,
+                        settings = servers[server_name],
+                        filetypes = (servers[server_name] or {}).filetypes,
+                    })
+                end,
         }
 
 
