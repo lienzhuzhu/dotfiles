@@ -1,3 +1,4 @@
+# env.sh
 export VISUAL=nvim
 export EDITOR=nvim
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"

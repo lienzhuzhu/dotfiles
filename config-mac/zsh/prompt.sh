@@ -1,3 +1,4 @@
+# prompt.sh
 # Elegance Over All
 # by Lien Zhu
 # https://github.com/lienzhuzhu/dotfiles

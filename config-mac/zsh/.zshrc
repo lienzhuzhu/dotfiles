@@ -66,7 +66,7 @@ zle -N zle-keymap-select
 # ls Command Output Colors #
 #+------------------------+#
 #export LS_COLORS="di=1;33;40" # Linux
-export LSCOLORS=dxfxcxdxbxgexexabagacad # BSD/ MacOS
+export LSCOLORS=dxfxcxdxbxexexabagacad # BSD/ MacOS
 export CLICOLOR=1
 
 
