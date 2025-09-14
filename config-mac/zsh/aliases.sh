@@ -56,7 +56,7 @@ gd() {
 }
 
 # better ls
-#alias ls='eza'
+alias ls='eza'
 
 # cd into NOTAKER_CORTEX_DIR
 nd() {
