@@ -11,3 +11,12 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set('v', 'k', 'gk', { buffer = true, noremap = true })
     end,
 })
+
+-- Force indentation for specific filetypes if needed
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end
+})

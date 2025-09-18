@@ -11,7 +11,7 @@ return {
             enable = true
         },
         indent = {
-            enable = false,
+            enable = true,
         }
     },
     main = "nvim-treesitter.configs",
