@@ -4,6 +4,8 @@ export EDITOR=nvim
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
 export NOTAKER_CORTEX_DIR="${XDG_DATA_HOME}/.notaker"
 export NVM_DIR="${XDG_DATA_HOME}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export HISTSIZE=10000                               # Maximum events for internal history
 export SAVEHIST=10000                               # Maximum events in history file
